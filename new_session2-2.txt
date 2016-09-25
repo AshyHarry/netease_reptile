@@ -1,0 +1,684 @@
+This is CS50, Friday of Week 0.
+ Welcome back for those returning, welcome to CS50 for those joining us for the first time.
+ Typically, we will not in fact have classes on Fridays, just this week and next for shopping week and Labor Day.
+ But thereafter we will indeed be Monday, Wednesday.
+ So, one of the side effects perhaps of a course like this is that it begins to open your eyes to all sorts of technical curiosities in society and technical inaccuracies in society.
+ And so what I did this morning, this is literally how I spent my morning, well, it was troll around YouTube looking for nice incarnations of things that perhaps yesterday you might not have blinked at that but 10 weeks from now you should absolutely poke fun at these people.
+ So with that said, I give you a little something from YouTube.
+ For weeks I've been investigating the murders with a certain morbid fascination.
+ This isn't real-time.
+ I'll create a GUI interface using Visual Basic, see if I can track an IP address.
+ So there we have, I'll create a GUI interface using Visual Basic, see if I can track an IP address.
+ So, a lot of technical words independently that are very much accurate and used in technical context.
+ But GUI, graphical user interface, kind of said, a graphical user interface, two using Visual Basic.
+ So this is kind of a modern show and that is kind of a retro language and it's also as will be one of the takeaways of this course completely irrelevant to what problem you are solving, the fact that this engineer is using--proclaiming to use Visual Basic really is not a compelling part of the story.
+ And finally, see if I can track an IP address.
+ Well, all of that might in fact be the goal but it's when you start hearing things like this hopefully that you at least start to grimace a little bit.
+ And let me pull up a second one, it turns out it's also from CSI.
+ Let me make sure that the user annotations are disabled this time and let's take a little look at this one here.
+ This is the vacation shot, it gives us something to work with.
+ The tourist was taking a picture of this girl.
+ So, margin the reflection in her eye.
+ Just slide the image over.
+ And there is our victim, our program.
+ Okay, so when you are working with source material that looks like this, there is in fact no such thing as infinite zoom in computer science.
+ You cannot just tell the computer to enhance that or can you clean that up and then magically use zoom in not only on the image but also on the reflection of the victim in someone's eyeball.
+ So here too are they taking some liberties.
+ But thankfully I also found in my trolling around this morning,something that is perhaps technically motivating and at least remains for those of you which is many of you who actually use Gmail, you might have seen a little advert in the top right hand corner recently saying new beta version of a little something called Gmail Priority Inbox.
+ So this one is not a spoof, it's actually a pretty cute video and it offers us the opportunity to just take a look at some of the kinds of ideas we'll be looking at in this course.
+ So I give you your Gmail Priority Inbox.
+ If you haven't turned it on or don't know what that thing is here we go.
+ So, if you've ever wondered, that is in fact how Gmail works underneath the hood? So, what are the takeaways though for us? So there're actually some really interesting computer science ideas underlying that we promised on Wednesday that computer science.
+ And this course in particular isn't at the end of the day about programming even though that is in fact how you will spend a good amount of your time and the skill that you will in fact walk away with.
+ But it's about approaching something that you actually care about, for instance, just--it's even something work a day like managing your email and getting through the day more efficiently and trying to answer a lot more cleverly, a lot more effectively questions like which things do I care I mean these are the kinds of things the computers can in fact if programmed effectively help us with.
+ So this little video suggested there're a couple of heuristics that a computer or that a programmer could use to figure out what emails are important to someone like me.
+ We look at what emails you reply to if you reply in theory that suggests this user must care about whoever sent this email or the topic they are in.
+ If you actually read it, that's a useful indicator.
+ Are there other indicators or tricks or rules of thumb that just off the top of your head come to you as useful mechanisms for doings this as well? Yeah.
+ So that's a good one.
+ So, whether or not the email is addressed specifically to you in like the two field or if maybe you were BCC'd or it's a big email list of which you're just part, that could signify that this is in fact useful for you.
+ Yeah,in the back.
+ So what the subject is, okay, so if it's something like, you know, buy such and such, a whole bunch of spam.
+ I mean buy could actually be a negative indicator that this is probably not of interest to the user.
+ Whereas please help or dinner or something like that might actually be more compelling to a human.
+ Other thoughts that come to mind.
+ Yeah,in the middle.
+ Okay, good.
+ So in Gmail context most of you know, you cannot--you can delete things but most people just save or archive emails.
+ So if you archive it, that's maybe a little hint that either this is just your habit or perhaps that you might actually care about this later in the future, whereas if you delete it, no, you really don't care.
+ Yeah.
+ So who the sender is, so maybe you could keep track of just who your most frequent correspondents are and if you keep seeing the same personfrom person X or person Y coming into your inbox and clearlyI like having a dialog with these people or have to for work, that might in fact bubble up in your inbox.
+ Other thoughts? Speed of response, right, so I actually do tend to respond to some people's emails more quickly than others and that in fact might be a useful indicator.
+ And if I'm already in this habit, let my software, let my computer do that thinking for me and bubble up to the top of my attention what I should address first.
+ And another ideaï¼ So how long you leave the window open.
+ So this one too is an interesting heuristic and these kinds of ideas are actually really prevalent in like the advertising world, and I'm sure of sites like Facebook and the like actually do keep track of how much time you spend using this application or how much time you spend on this particular page so that they can infer from that behavior what you actually care about and what you might actually look at more intensely.
+ So feel free to play with this if you like.
+ I just turned it on literally this morning to start playing and I'm on myself a couple of email lists, one of which had an email this morning saying, "Hey, has anyone tried this, it really kind of sucks.
+" Whereas the other email list said completely the opposite.
+ So it's this interesting scenario where it's probably hit or miss, certainly early on and as one of the clips they are indicated, these are the kinds of things where computers ideally have to learn overtime.
+ A priori, Google has probably not going to know what you care about.
+ But if it watches you over some amount of time just like it's been for years with advertisements, can this kind of algorithm, this kind of process presumably improve? So that's perhaps a hint of where we're going in the future.
+ So for those of you joining us for the last time, know that the video of Wednesday as will generally be the case is already online.
+ You can go to cs50.
+net/lectures and that will lead you to a link where the video is nicely embedded in HDV.
+ Thanks to our video grapplers this year.
+ What you'll see here is a little clip of what I showed on Wednesday whereby this semester for the first time we'll be including after a few days, it takes a few days of human labor toâ we will be transcribing the lectures in their entirety word for word, awkward as this is for me to actually see the words I'm saying in retrospect.
+ But you will then be able to read what's there.
+ Do keyword search based on anything that I happen to say, if you search for this in a few days' time.
+ And similarly can you click on any sentence in the transcript, jump right to that point in the video.
+ So thisis very much online education CS50 style.
+ And if you speak other languages that I don't, you can nonetheless compel me to speak them at least in subtitle form.
+ So I wanted to take a few excerpts from the course's syllabus since it's not an interesting document to walk through line by line, but something you should read at some point very soon.
+ What ultimately matters in this course is notâ is not so much where you end up relative to your classmates relative to yourself in week 0.
+ And so this really is the mantra of the course.
+ One of the concerns out of the gate for students in this course, particularly those we dub less comfortable is that you're already starting off at a disadvantage.
+ My god, this student sitting next to me was programming since he or she was 6.
+ This person next to me took AP computer science, and that may actually be the case.
+ And statistically it probably is the case to some extents but it really doesn't matter.
+ I mean unlike a lot of the courses here and at universities, we really do take a much more individualistic approach and that is to say at the end of the day do we consider both upward trending, both your initial experience and also how you approach the course's projects throughout the course of the semester.
+ You can nonetheless take the course Pass/Fail.
+ I mentioned this on Wednesday.
+ This is actually something very near and dear to my heart because I literally would not be doing what I do in life today had I not taken a couple of courses here, this one in particular, pass fail.
+ It helped me in my mind sort of take that step that I was otherwise just a little too hesitant to take in my freshman year.
+ And then for a lot of students too, what this mechanism does is it just takes the edge off a course like this.
+ Odds are if you're an upperclassman, you've had that experience where it's 12 AM, 1 AM, 2 AM, and you're really starting to stress over the incompletion of some problems that for some course, well frankly what this mechanism allows you to do if you're already 90 percent of the way there, you can call it a night and you can put it down and you could feel good nonetheless about where you got to.
+ And that in my mind is one of the upsides of taking a course like this, pass fail, in order to take the edge off.
+ The course is not FYI graded on the curve.
+ There is no pre-determined cutoffs between letter grades for those who do take letter grades, and those less comfortable and somewhere in between are not at a disadvantage as the syllabus promises vis-a-vis those more comfortable.
+ We do in fact--I do have conversations with all 30 plus of the teaching fellows about all 300 plus of the students at the end of the semester, and that is in the end what determines the outcome.
+ So some of the mechanisms that are in place now to make the next several weeks among the most memorable of experiences.
+ So with the problems, that is where you really will get your hands dirty and truly immerse yourself in this world of computer science and programming.
+ But life happens, stuff comes up with sports, with student groups, with elements and the like.
+ So the course very generously offers 9 late days that you can spend accurate discretion throughout the semester.
+ You can take one late day on one piece set, 9 late days on one piece set.
+ It really is up to you to manage throughout the term.
+ We also drop the lowest score on a problem set and also lest in my appeal in the last lecture in this sounds a little too tailored to only those less comfortable realize too those more comfortable as we'll see today.
+ For those do we offer what we call hacker editions of each of the problem sets.
+ We do expect the majority of the students to tackle, as you'll see tonight when the PDFs go online at 7 PM, the so called standard edition of each problem set.
+ But if you are so inclined whether for this problem set or any other throughout the term, you can change your mind week to week.
+ Do you have available to you what we call the hacker editions in more details on those in the courses syllabus? And besides that, lest that not be enough to make sure everyone can succeed in a course like this, we have a very diligent teaching fellow who not only likes to scribe the courses lectures.
+ It's not much fun to read 20 pages of my verbal text written.
+ But having a few pages of authoritative note do exist.
+ The teaching fellow for each lecture takes what we call scribe notes.
+ These are posted within a few days online.
+ He likes to include some snarky comments on the footnotes generally about me at my expense.
+ So keep an eye up for those.
+ And the point of this is so that you don't come to class heads down the whole time thinking everything I say is absolutely worthy of being written down.
+ Ideally like we started today, it will be a bit more like a conversation to the extent that's possible in a theater like this.
+ One hundred fifty plus office hours is the current tally that you'll see starting to appear on the course's website, thanks to our 60 plus person staff and you'll also see online soon once you have your accounts as per problem set 0 spec.
+ For the course's website, there'll be support forms and an email address, help@cs50.
+net, that you can turn to and frankly this is more a commentary on our lack of social lives during the term.
+ But we pride ourselves generally on 5 or so minute response times at most hours during the day.
+ So, it's a sick obsession with some of us, myself included.
+ So with that said, what can you do? So this is such a silly thing, but 15 years ago, and then sat down one night and then I'm spending the next week on this project even though I lived in Mather House, never really was the shuttling type on a lot of Quad friends who did, and this was kind of interesting to me.
+ There was this big printout of the shuttle schedule and this was not a very navigable document.
+ Certainly this is like mid 1990s, we did have the web and the internet but things were slow and it just wasn't really conducive to actually finding things quickly unless you really gave some thought to the problem.
+ So I sat down over the course of a week and implement what I probably shouldn't have called Shuttleboy at the time ' cause this jargon has lived on.
+ And this is now a program that's web based, it's SMS based, it's voice based and it used to be Linux based as you'll see in a couple of weeks and it's just a program thatlet's you click where you are, click where you wanna go and voila, here are the next several shuttles that you can take.
+ I thought I'd give you a little glimpse at what you can do for your final project toward terms end.
+ We own our own phone number, that allows you to input key strokes like you would any system and this is an example of what we call CS50 Voice.
+ And that's an example of someone else's phone.
+ This is CS50.
+ For Shuttleboy, press 1.
+ To start over, Press 0.
+ What is your origin? For Quad, press 1;
+ Mather, press 2;
+ Boylston, press 3;
+ Lamont, press 4;
+ Mem Hall, press 5;
+ to start over, press 0.
+ So press 1 for Quad.
+ The next shuttle leaves in 2 minutes at 1:30 PM and then at 1:40 PM, 1:50 PM and 2 PM.
+ This is CS50.
+ That is only option 1.
+ We have like 9 more slots to fill.
+ So that's 9 potential final projects that can live on in telephone form toward semester's end.
+ And we will show you exactly how you can write programs that actually interact with the user in that way.
+ And just as a fun aside, we also realized as computer scientists that sometimes technology is not the answer.
+ This is an unfortunate thing you see throughout education frankly, certainly at the secondary and primary school level where you just insert technology into the classroom and expect to solve problems, that is not in life always the case.
+ Sometimes the simplest solutions are in fact the best and thus consistent with this constant reminder to ourselves was born last year what we dubbed Shuttleboy Cards.
+ Now granted we're now starting to take this all shuttle theme to an extreme perhaps, but we realized you know what, it's actually not that efficient sometimes to call a phone number, it's not that efficient to pull up the mobile web.
+ Sometimes it's a lot easier to reach into your wallet, pull out a piece of plastic and voila, there are the next several shuttle times.
+ We mention this only because we're just going to press with the latest incarnation of this this year.
+ So if you go back to shuttleboy.
+cs50.
+net, you can pre-order for free your own CS50 Shuttle Cards, particularly those of you in the Quad, Mather and the like.
+ So, what does that mean as you exit a course like this? Well really, the things we've looked at thus far can you do after just a semester of this kind of material and exposure to this particular world.
+ I just wanted to draw your attention to some of the handouts we had Wednesday which are still available today if you didn't yet get them.
+ This is targeted for the most part at students who might want a major or minor in computer science, but there's also some interesting detail toward the end of this document, if and when you get a chance to peruse, including this chart that shows you the pathways that you can take throughout computer science here, sort of recommend it or popular courses that students tend to take even if they are in the humanities or life sciences or social sciences but want to round out their education here with something in the computing sciences do we have quads of courses recommended in the back that you can take after 50 in order to get a minor in this stuff.
+ And frankly this kind of stuff, this visualization of data, this is one of the themes of a course here called CS171, visualizations, which we'll actually learn--hear a bit about toward the end of the semester and it's all about taking data that might very well have come out of a computer and trying to decide what is in fact the best way to present this data.
+ To be honest, especially those of you less comfortable here, if you've ever struggled with some program or struggled with some piece of software, oh it's alright, it's not your fault.
+ It just really wasn't designed very well.
+ So actually thinking about how humans interact with machines and how you can optimize your so called user interface or GUI interface is also one of the themes in this particular field.
+ So, we ended Wednesday with some quotes, particularly from isawyouharvard.
+com, we thought it would be fun to just give you a couple of teasers from another favorite website of ours, a little something called Harvard FML, search for CS50 and you see some choice quotes like this.
+ I talk about CS50 so much that my teammates implemented a CS50 talk tax.
+ I get charged one dollar for each mention of the class.
+ I already owed 20 dollars and haven't been able to talk for more than five minutes without getting called out on it FML.
+ This is what happens over time as does--whoops! Did I miss one there? This is what may, in fact, happen to you over time.
+ We are a recurring theme it seems on that particular website.
+ So now, let's make things a little more technical for a moment.
+ Those of you more comfortable, rest assured we'll start filling in some gaps before long if you're already familiar with this.
+ But all of you in this room probably remember what we technically call the base 10 system or decimal system because back in grade school or the like, you learned to count and add and subtract numbers by way of columns.
+ The so called ones column on the right, the tens column next to it, the hundreds column, the thousands column, and so forth.
+ So if you had some number back in grade school like 123, well, why do we express this as 123? When really I just see on the board 1, 2, 3ï¼ Well, we have what? One in the so called hundreds columns, a two in the so called tens column so that's 10 times 1 plus 10 times 2 is 120, plus 3 times 1, 123 alright, so completely  uninteresting, if this is something long familiar to you, but it turns out computers work in exactly the same way.
+ The so called binary system, these zeros and ones that you'd probably have some vague sense underlie all computers today actually reduced to the exact same grade school kind of math and system except with computers, because it's a lot easier to use just two digits, zero and one.
+ Do they use only columns like with the ones column, the twos columns, the fours column, and the eights column? And if you noticed earlier that these are what we'd call powers of ten, these are just powers of two.
+ So if you need more--bigger numbers, you just have a 16's column and a 32's column, and so forth.
+ So what's the takeaway here? Well, if we actually want to represent something like the number 7, well in binary, not actually in decimal like this.
+ Well, what do we do? If we need a 7, this is the ones column, the twos, fours, eights, so here are our columns and this was our decimal system a moment ago, and I wanna express the number 7 and the only digits I now have access to are zero and one, whereas, in decimal, dec meaning 10.
+ I had zero to 9, which was 10, zero and 1, bi meaning two, high binary numbers.
+ I can only put a zero or 1 in each of these slides.
+ But after that, the math is the same, eight times whatever, four times whatever, two times whatever, and so forth.
+ So what's 7? Right, one, one, one and then a zero.
+ And just like in the decimal system, you can put as many leading zeros, anyâ as many zeros on the left that you want.
+ They're completely inconsequential and so we now have the number 7.
+ Meanwhile, the number zero is.
+ Alright, it's all zeros so I'll--just for consistency, use four of them here, but that's just an aesthetic.
+ And I mentioned on Wednesday that computer scientists do in fact start counting from zero not one.
+ Well, this is pretty much why.
+ Because if you ever holdâ the numbering system reduces to this basic idea of zeros and ones, each of which is in a certain column, each of which has some weights associated with it, it's just natural.
+ It's obvious to start counting at zero.
+ Otherwise, you're wasting a bit, so to speak, unnecessarily.
+ And a bit, B-I-T, just a shorthand for binary digit, so a digit of zero over a  one, bi means two, you only have two digits.
+ Hence, the word bit was born.
+ So just as a little sanity check, number 15 in binary would be? Just four ones, and how about the number 65,535? Anyone? You know you're a nerd if--so 16 of those ones will give you that particular number.
+ And I can't, myself, go higher than that but you could certainly do it mathematically.
+ Now this is not the kind of stuff that computer scientists spend all their time doing, but it will germane.
+ In fact, midway through the semester, when we look at the notion of digital forensics and recovering things like JPEGS and representing files like JPEGS and JIPS and the like on disk we're actually gonna have to revisit this  idea of actually storing information in zero or one form and so it's going to become relevant as to how you represent these numbers on disk, how you manipulate these numbers on  disk, but this really only gives us the ability to express numbers at this point in time.
+ We ultimately wanna be able to express letters so we can implement things like Gmail and actually implement text on the screen.
+ So how do we do that? Well first, a cartoon that you might now actually get those otherwise unfamiliar.
+ See this happens every semester that the chuckles, the grimaces, kind of roll through the crowd as people catch on, but there you go.
+ Now, you get geek humor.
+ And for better or for worse we've done a lot of damage over the past few years for this stuff.
+ When you get more and more acquainted with geek humor from the likes of this is Foxtrot XKCD is popular, Ph.
+D.
+ comics, there's a whole bunch of geekery out there that will perhaps turn toâ so that you do exit this course as a complete side effect with an understanding as to why it was funny or at least awkward that we did, in fact on Wednesday, have a CAT pictured in a ceiling.
+ So, how do you go from just numbers, zeros and ones to actually useful information? Well it turns out a bunch of years ago people just decided that if we have the ability to express numbers and we actually care about expressing letters of  the alphabet, well we just need some kind of mapping between one and the other, and so thus was born what's generally called the ASCII.
+ This is just an acronym that you still see and use today, though there were newer systems that are more expressive for other languages, non-romance languages.
+ But ASCII is just a code.
+ This might look a little cryptic at first, but it turns there is some very obvious patterns here, for instance.
+ According to this chart, if you want to represent the letter A in the so called ASCII system, what number do you actually use to do so? Ninety-seven? and upper case A would be 65.
+ So this is kind of a nice chichi.
+ Now, once you know each of those, you can now do 25 more upper case letters and 25 more lower case letters then there are some other stuff like punctuation and things you see on the keyboard.
+ All of those do need their own encodings, but at the end of the day, if you already knew coming into this class that your computer stores information, somehow, using zeros and ones, well it turns out that if you have typed the letter A on your keyboard and thus need to store that inside of your computer, well, how do you actually go from numbers to that letter and back? Well again, we can go to our ones column, twos, four, eight, 16, and then we can go to 64, and then 128, and this gives me 1, 2, 3, 4, 5, 6, 7, 8.
+ So this is intentional.
+ I now have eight columns, though sloppily written there, eight columns or 8 bits.
+ So this is what we know as a byte.
+ You've probably been surrounded for years now by bytes and kilobytes, and megabytes and terabytes, and the like.
+ Well, this is just a way of saying not bits, but units of eight bits at a time.
+ Why is this useful? Well one bit, really not all that useful, two bits still not all that useful.
+ Eight bits? Starting to get useful because, in fact with eight bits can you implement things like this? So with eight bits can you express 256 possible characters? That's pretty good 'cause now, I can pretty much cover my American keyboard pretty effectively both upper case, lower case, and a whole bunch of punctuation.
+ For other languages as in aside, there are other encoding schemes when there are more characters.
+ So what would be the letter A in binary inside of a computer's memory when you hit the letter A on the keyboard, for capital A? Zero, one, zero, zero, zero, zero, zero, one.
+ And so this, in fact, when you say your computer stores information as zeros and ones, you've just typed the capital letter A, that's all that's going on inside.
+ Now, how is that actually being implemented? It actually depends on the technology.
+ You probably know your computer has something called RAM which is where documents and programs live just temporarily while you're running them 'cause RAM tends to be pretty fast and whereas your hard disk is where programs and files  live permanently.
+ You can pull the cord and your files should not actually get deleted but the hard disks areâ use a different technology altogether.
+ But at the end of the day, and here's why we just went with binary and not decimal years ago, when you have one implement a computer with a physical device, it's actually really easy to represent the  notion of on or off.
+ Consider a light switch.
+ You can go on or you can go off and actually, how about some gratuitous use of technology? For those of you for--with iPhone 4, by far, the most useful application for 99 cents is this flashlight in the middle of the night.
+ So this might represent a one.
+ This now represents a zero.
+ One, zero, oneâ promise it gets more interesting, zero.
+ So why is this germane? Well, if you're implementing a computer that needs to represent information now all you need is something like electricity which can be on or off, on or off.
+ And when you actually wanna store information on disk, can you actually use, as we'll see in a moment, magnetic particles.
+ But just to hammer home this point, if I could, we have time for one awkward demonstration.
+ And for that I need a byte of volunteers, alright? First eight hands that I saw we're roughly in here.
+ So come on up and I'll--okay, one, two, three, four, five--five, six, seven, eight.
+ But you have to be comfortable on stage, that's the catch 'cause this will be going out on the Internet.
+ One, two, three, four, five, six, sevenâ sure, come on up, and the eighth person to stand up right here.
+ Come on up.
+ Okay.
+ So we now have a byte's worth of volunteers.
+ Why don't we use this side of the stageï¼ and I'll make some room for you.
+ You are the 128th's column, you're the 64's, 32's, 16's, 8's, and we're gonna have to fix this slightly in a moment.
+ Otherwise the math is gonna get completely screwed up.
+ So if you guys could come over here but still maintain your alignment so 128 should be all the way over here and one, you should be all the way over here and you guys similarly need to shuffle.
+ And if you wanna come up closer to the stage where everyone can see you.
+ Alright! We now have a byte's worth of volunteers.
+ Now fortunately this time, it's not speaking role.
+ You just need to express in ASCII character, one at a time, and these brave souls are simply going to spell something out for us to hammer home this point of binary.
+ Now, each of you is essentially a place holder or a column.
+ Why don't we have you, when the time comes, raise your hand if you're supposed to be representing a one? So on, and or true, is another way we generally put this.
+ And if you're our zero just continue standing there awkwardly, Alright.
+ So with that said, we have a three-letter word so we'll have three rounds of hands going up or down.
+ On the back, they have a little chichi that tells them what to do.
+ So folks [laughter], otherwise this gets really awkward and really inaccurate quickly under pressure.
+ So go ahead, round one.
+ That's okay.
+ So what number first are they presenting? Sixty-six, right 'cause we've got one in the 64's column and a one in the two's column, okay.
+ So now, a little chichi up top, they are representing the letter? B.
+ Okay B.
+ Alright, so a little pause, just to let that sink in.
+ Okay, round two, execute [laughter].
+ They really--it says on the back of your seat what you should be doing.
+ Alright, what number are they representing now? Seventy-nine.
+ In fact, if you add up each of these numbers, from this binary number here.
+ Seventy-nine is, of course, the letter O so we're almost there.
+ Round three, go.
+ And this spells? No it shouldn't spell boy [laughter].
+ We have an error somewhere.
+ Its 87 if I did the math right myself, 87which is? Bow.
+ Bow, so take your bow.
+ Thank you very much.
+ Alright.
+ That's the soon--we came a little better prepared this time and we brought CS50 stress balls for everyone to make this all the more of an incentive.
+ Oh, that was sweet.
+ What a gift.
+ Oh--but if you can meet with our teaching fellows over there, they're gonna ask the legal department to see you next so Alright, I think we're all set.
+ Is that number eight? Okay.
+ Oh, you can keep that.
+ You can keep that.
+ Okay.
+ So what doesâ how does that actually apply to real computers, right? So this is not the most efficient way of representing information.
+ What actually goes on underneath the hood? Well, it turns out some of you might recall this silly game from years ago.
+ Wooly Willy? It turns out these are really hard to find in the 21st century.
+ So these things called Wooly Willy is just a plasticâ it's this paper mend with a plastic cover and there's all these black magnetic particles here.
+ And if you use this little magnet you can draw a mustache or hair, or eyebrows or whatever on this particular face.
+ Now this is mostly irrelevant to what we're talking about except for the fact that there are magnetic particles involved and they're really small because it turns out what's inside most of your laptops and desktop computers are these things called hard drives.
+ And a hard drive, if you ever open that thing up, is actually just a big metal container t hat contains one or more platters, so to speak, these circular pieces of metal and on top of those circular pieces of metal are essentially tiny little magnetic particles like this, so small that you actually can't see them.
+ But if you touch them or open the hard drive and actually poke around, you will do damage because you'll mangle theseâ the alignment of these particles.
+ You'll corrupt your data.
+ But what's interesting is when they're actually there, essentially, if this is a magnetic particle, you can actually represent zeros and ones pretty easily.
+ You don't need a light switch or a light bulb or an iPhone app to turn something on or off.
+ You can take something that's magnetic with a north-south magnetization and just say arbitrarily, this will represent one.
+ But if its south-north, this will represent zero.
+ So on your computer's hard drive are again, a whole bunch of tiny magnetic particles aligned this way or this way.
+ And now that you have patterns of bits after bits after bits, and if you chunk them up into say, eight-unit quantities, now can you start storing words and sentences, and paragraphs.
+ And as we'll see mid semester, photographs and videos and other more sophisticated file formats.
+ It's one thing to talk about this.
+ Let me go ahead and open up instead a more interesting graphical carnation--incarnation of this.
+ The hard drive is where your PC stores most of its permanent data.
+ To do that the data travels from RAM along with software signals that tell the hard drive how to store that data.
+ The hard drive circuits translate those signals into to voltage fluctuations.
+ These in turn control the hard drive's moving parts.
+ Some of the few moving parts left in the modern computer.
+ Some of the signals control a motor which spins metal-coded platters.
+ Your data is actually stored on these platters.
+ Other signals move the read/write heads to read or write data on the platters.
+ This machinery is so precise that a human hair couldn't even pass between the heads and spinning platters, yet it all works in terrific speeds.
+ So if you've ever done something bad like drop your laptop or smack your computer and you've never been told not to do this.
+ It's largely becauseâ and if you've never been, don't do this, it's largely because there are these very sensitive moving parts and there are relatively few moving parts left in today's computers.
+ Some of you, in fact, might not even have these devices anymore with moving parts.
+ The fan is perhaps the only thing left in those of you who have computers with what are called SSDs.
+ But in hard drives where we actually have these moving platters, here is in fact, how we get from electricity and magnetism to those zeros and ones.
+ Let's look at what we just saw in slow motion.
+ When a brief pulse of electricity is sent to the read/write head it flips on a tiny electromagnet for a fraction of a second.
+ The magnet creates a field which changes the polarity of a tiny, tiny portion of the metal particles which coat each platter's surface.
+ A patterned series of these tiny charged berries on the disk represents a single bit of data in the binary number system used by computers.
+ Now, if the current is sent one way through the read/write head the area is polarized in one direction.
+ If the current is sent in the opposite direction, the polarization is reversed.
+ How do you get data off the hard disk? Just reverse the process.
+ So as the particles on the disk that get the current in the read/write head moving put together millions of these magnetized segments and you've got a file.
+ Now, the pieces of a single file may be scanning all the hard drive's platters, patternsâthe mess of papers on your desk.
+ So the special active file keeps track of whatever you missed.
+ Don't you wish that you had something like that? Alright.
+ So take it with a grain of salt.
+ It was made by a computer scientist, but now, it's fun time.
+ So, these things here that you have in your hand, is the results of my spontaneously going to staples before class.
+ I was the only one, believe it or not, at the store, who was buying floppies today [laughter].
+ What you'll notice very delicately is that there's not all that much to this so called floppy disk.
+ It's actually a much cheaper example than handing out hard drives.
+ But at the end of the day, if you move this metal thing aside with your fingers, don't squeeze it too hard.
+ You will see inside that there's a platter, but it's literally a floppy platter, even though the disks themselves are fairly firm plastic.
+ This thing, if you now go ahead and very gently corrupt a few of the bytes, you can see that you can push down on that thing pretty easily.
+ Now--oh, now we've ruined them.
+ So why don't we go ahead and take this just a step further? Go ahead and just pinch the metal plates and watch your eyes 'cause these do--things do have little springs.
+ Go ahead and just pull that metal plate off.
+ And now you truly can see that there's not much to this disk.
+ And then this is where you can really tear into this device.
+ If you put your fingers between the plastic opening at the bottom, and here's where you gotta watch out for the spring, pull the thing apart and that's it.
+ The irony is--these things cost like a dollar each now because no one needs them anymore.
+ It's kind of an Ec 10 thing there, but that's it.
+ So unfortunately, we had just ruined roughly 1.
+4 million bytes worth of data.
+ They came formatted or blank so not such a big deal.
+ But in fact, if you just run your fingers again and again over this floppy disk you are disorienting those particles or knocking them off perhaps altogether, depending on the medium.
+ And the rest of this thing, this is just a cheap piece of molded plastic.
+ This little felt thing there is just to avoid too much friction from building up with the plastic or to keep it slightly separated from the case, but that's it.
+ That's all there was to those things called floppy disks.
+ But what's amazing is that the hard drives we have today in a desktop or in a laptop, a hard drive and a laptop is only about--yey big! It's roughly the same size physically as those floppy disks and yet how many, how much, how many bytes fit on a typical hard drive today? What's that 500, so 500 megabytes, this is 1.
+4 megabytes so a typical hard drive might have 500â no, not 500 megabyte, 500 gigabytes which is 500 billion bytes and if you have a desktop computer you might actually have a 1 terabyte drive or 1.
+5 terabyte drive or 1--2.
+0 terabyte drive.
+ These are trillions now of bytes.
+ And so it wasn't all that many years ago frankly that you know, certainly, people in this class were still using these things.
+ Thankfully, they've fallen into disuse.
+ They're not the most robust things anymore.
+ But the technology and the fundamentals and the ideas, it's pretty much exactly the same as we're using today in some of our modern computers.
+ So, any questions on zeroes and ones? It's a little awkward asking questions in here but let's give it a try.
+ Good question, so what happens when you format a floppy disk or format a hard drive? To be honest, not very much and this is one of the reasons that forensic investigators are actually able to do such a good job for the police and FBI or the like because so many computer programs, Mac OS and Windows, they'll say, are you sure you want to do this, this will erase everything from your disk, this will erase everything from your hard drive if you so called format it or partition it.
+ It's another piece of jargon you often hear.
+ That generally is just modifying a few bytes, a few kilobytes worth of information.
+ The end result of which is that the computer forgets where all of your files and folders are.
+ But the bits that actually compose those files and folders are in fact exactly where you left them.
+ And so this is why in problem set 5 last year when I took photographs on campus with a compact flash card, just standard consumer media and I accidentally formatted that compact flash card, I only lost the first few kilobytes, the first few thousand bits on that compact flash card.
+ But as you probably know, a JPEG, a photograph, these are usually multiple megabytes these days which means there's a ridiculous amount of data still on that digital camera.
+ And so if you know what patterns of zeroes and ones to look for as you will yourselves this year in that forensics problem set, can you recover a lot of that data? So in short, formatting a disk gets it ready for new data but it tends not to get rid of the old and only recently are Apple and Microsoft finally realizing that consumers actually want to securely erase their information for privacy or financial or whatever reasons, but up until now and even know on some operating systems it's not in fact very easy, other questions.
+ Yeah.
+ Exactly, so you might have been thought especially in years past to defragment, so to speak, your hard drive once in a while.
+ And this is because as you start writing--saving files to your hard drive, what happens is you might save this file here, then this one, then this one, then this one, but very reasonably you might go back eventually and delete this one.
+ Now you have a gap in your data and yet you still have some magnetic particles there that could be useful.
+ So thankfully, modern operating systems allow you to put parts of files here, parts of your file here, parts of your file here, but the end result is that your files get fragmented.
+ The operating system still finds it but this process of getting some of your files bits from here, some from here, some from here, induces a potential slow down.
+ Now defragmentation as an aside is not so much necessary these days because hardware has gotten so performance.
+ But it is in fact indicative of what's actually going on underneath the hood and for a forensic investigator to be honest and even problem set 5, it poses a potential wrinkle if those JPEGs, those photos we took are not contiguous back to back to back but are all over the place.
+ That's a lot harder of a problem to solve if you need to reconstruct the fragmentation, yeah.
+ Good question, so there is this little reading head kind of like in an old phonograph player that does move back and forth and in and out depending on the implementation.
+ So there is generally a little computer, a circuit board in the hard drive itself that knows how to tell it to go up, down, left, right and so forth.
+ And if you've ever heard the word driver software that you install in your computer so that your computer, your operating system, Windows or Mac OS, knows how to talk to that piece of hardware, it's that driver software that then empowers the operating systems to send those commands as well, up, down, left, right depending on how the diskâ the data is laid out on the disk.
+ Let me go over here for another question.
+ Okay, what are the advantages of SSDs and how do they work.
+ Let me answer this briefly now, I'm happy to chat more during break time.
+ SSDs are where things are going.
+ SSDs is like using compact flash or SD cards.
+ The things we've had in cameras for several years by putting gigabytes, soon hopefully terabytes of storage on a device that has no moving parts.
+ Generally, the feature is that they are much faster because they have no moving parts.
+ Even though a hard drive spins at 7200 times per minute or even faster, that's relatively slower than the speed of light.
+ And so when you actually have a device that is purely electronic, and even that doesn'tâ the bits don't flow at the speed of light in reality.
+ It's a lot faster of a device.
+ But these days you pay for it which is why you get SSDs, you're paying several hundred dollars more.
+ So let's transition from these lower level details.
+ I'm happy to take questions during break and after to actually making this hardware do something in software.
+ And for this I need one volunteer.
+ Let's go and okay, right here.
+ Oh, but let's see.
+ Okay, I need a second volunteer for reasons that will be clear in a second.
+ Come on down.
+ Your role has just been changed because you're not wearing any socks today.
+ So come on over here, we're gonna have--what's your name? Sam.
+ Sam and? Philip.
+ Sam and Philip.
+ Alright, I'm David and let's have Philip sit down.
+ You'll play role sort of a shoe salesman, shall we say? Okay.
+ Alright, and don't worry I have a script for you but not for Philip.
+ So here is a computer program.
+ This is not written in a particular language.
+ This is what's written in what we'll generally call pseudocode.
+ Pseudocode is kind of an English-like syntax that's just a useful way of expressing yourself fairly succinctly, fairly computer-like but without having to worry about stupid details like whether it's Java or C or whatever.
+ You just kind of say what you mean but you say it succinctly.
+ But what's interesting about this particular example is one, it's imperfect.
+ I didn't quite get this program right.
+ Two, it also highlights a number of constructs that we'll see today and we'll see recurring throughout this world of programming, things like loops and conditions and variables and the like.
+ So what we have Philip here for is to actually be the one who if you could start taking off your shoes and socks, I didn't just claim this in the beginning but we very quickly in this course start to hemorrhage volunteers overtime.
+ Alright.
+ You don't have to--you don't have to touch.
+ It's okay.
+ So this first line of code, I will get it started but then I'm gonna have you take over and actually instruct Philip what to do here.
+ So this first line of code, and some of this again we'll be rehashed but at least you can delight in the awkwardness that is this demonstration.
+ So line 1, I've numbered the lines just for the sake of discussion.
+ Line 1 is creating what we'll call a variable.
+ Now, unlike high school math or in algebra where you call things X and Y and Z, in programming, in computer science, you're actually dealing with humans where it's useful to have a variable name that's more descriptive than X and Y and Z.
+ So here is an example of socks on feet being the number of socks on Philip's feet which is in fact 0.
+ On line 2, we're gonna induce what's called a loop, so do you wanna go ahead and Philip  henceforth you get to stare, stare at the awkwardness.
+ Go ahead and recite for us line 2 of this program.
+ Okay, so while not equal to, so bang equals, exclamation point equals is computer science syntax for saying not equal to, while not equal to 2 which it is not, it is equal to 0.
+ What should he do next? Okay.
+ Excellent, look for sock, alright.
+ Step 5, now this is an example of what we'll henceforth call a condition or a branch because it's sort of a fork in the road.
+ Okay, if you find the sock then put on sock.
+ Intentionally, I bought the worst socks I could.
+ No, I like it.
+ I get this.
+ Available at the Harvard Coop.
+ Alright, next line.
+ Socks on feet plus plus.
+ So this plus plus is sort of shorthand notation for incrementation.
+ So just add 1 to this variable's value, so now socks on feet is of course 1 and so next.
+ Look for matching sock.
+ Problem, so where are we at line 9? If you find a matching sock which you didn't so then else.
+ Okay, so notice again the control flow and thisâ the choice of indentation here is deliberate throughout programming whether it's in C or PHP or JavaScript in this particular course.
+ The indentation gives you a visual cue as to which lines are related to each other.
+ So the fact that line 9 did not match, if you find a matching sock which we didn't, that means we immediately jump to the else which is line 13 and so Philip now has to do what? Remove first sock from foot.
+ Oh man! Socks on feet, minus minus.
+ We decrement so to speak the variable and then where will we go next in terms of the flow control, the flow of this program.
+ Back to the while.
+ Right, so the fact that everything is indented means while we're doing, while the variable is not equal to 2, keep doing this.
+ And so we're going to repeat.
+ Now, rather than  go through this again and again, because frankly you can probably see where this goes before long we're gonna hit some problems.
+ What's one of the problems you see or that we tripped over already? If there is no matching socks then what's gonna happen with Philip here? We're gonna have a so called a loop, an infinite loop and you actually experience this in the real world.
+ If you've ever been using some program, you did something completely innocuous, pull something down from a menu, click a button, you didn't do anything wrong and yet all  of a sudden the thing just starts hanging there or you get a little spinning beach ball or the hour glass or whatever it is.
+ Something completely not your fault, it's not.
+ It's because the programmer or programmers that wrote that software might have been pretty specific but not specific enough.
+ Computers smart though they may be and intimidating though they may be, they cannot yet think for themselves.
+ They can't just know what you mean.
+ And so similarly as Gmail's priority inbox, it's gonna be pretty flawed for a lot  of us at least initially because it just doesn't know the answers a priori correctly unless we teach it or program it to be better.
+ There is also another flaw in here or multiple flaws arguably.
+ But something else catch your eye? This is a very imperfect program.
+ So, in fact we may not find a sock at all and yet we don't seem to handle that at all unless if we don't find any socks, what do we do? We replenish the sock drawer.
+ So if we tease this apart and this is actually nice, every semester I get beat up for just how bad this thing actually is if you start really picking it apart.
+ You find that there's a lot of flaws but this is intentional and this is one of the sort of arts that you learn early on is that with computers you really do need to be careful and you need to think about this so called corner cases and even you might use popular websites or programs that have so called bugs or mistakes and that is simply the results of the programmer not having anticipated some particular problem.
+ So we have a parting gift.
+ Why don't we give Philip both the matching pair and give you each a pair of socks since he didn't get to  wear this one, they are brand new, in fact, and a big round of applause for what I'm sure is a little difficult.
+ Take your time.
+ So, let's actually now take a 2-minute break, we're gonna change tapes and we'll come back and we'll actually write programs with a real computer and some real animated characters.
+ More in just a couple of minutes.
+ Alright, we are back so we just wrote a programming pseudocode or walk through a programming pseudocode.
+ Let's take a quick glimpse of what it's like to write a real program albeit a very trivial one.
+ Starting next week you'll actually be using a cluster of systems that CS50 itself runs called Cloud.
+CS50.
+net.
+ This is a bunch of computers running an operating system called Linux which has a variety of interfaces too and more on that next week.
+ But it turns out that on Macs and if you have the right software on PCs, you can  kind of get a teaser of what this environment tends to look like and be forewarned, what you're about to see is intentionally very underwhelming.
+ I am going to run a program called Nano and type nano hello.
+c and I'm gonna type the following very quickly without much explanation because we'll dive into this more next week.
+ But what I'm doing here is programming.
+ Sorry, I didn't mean to make it sound so condescending.
+ >> So this is just a dumb text editor called Nano, dumb in that it's very simple which is nice because it eliminates a lot of the complexities of learning a new tool when really all you wanna do is solve an actual problem.
+ So I'm gonna go ahead and save this file, it's hello.
+c, dot C hints at the fact that this program I just whipped up is written in a language called C.
+ Now, this is underwhelming with what you can do in just a second in this particular language.
+ But again as per Wednesday's lecture by the end of the semester, you'll be making things like isawyouharvard.
+com or any websites really that you can imagine.
+ Can you probably produce after just several weeks of fundamentals like these? So I'm saving this file, notice there is a few keywords that we'll come back to next week like main which is kind of the main part of my program.
+ There is this include which allows me to include code, source code so to speak that other people wrote so I don't have to figure out for myself how to print things to the screen.
+ Other people are telling me how toâ other people had solved that problem for me, and this thing between quotes, we'll start calling a string.
+ It's just a sentence or words or whatever that I wanna print.
+ And then there are some stupid syntax like curly braces and semicolons that initially are kind of annoying because you have to remember where all this junk goes.
+ But at the end of the day, it's really going to be identical to what we see pictorially with Scratch.
+ I'm now gonna run a program called GCC which is what's called the compiler.
+ Compiler, we'll also revisit next week takesâ human text, ASCII text as input and output zeroes and ones that represent that program in a manner that the CPU, the Intel Inside, actually understands which isâ interesting, dammit, not installed on this computer.
+ So what we would see, I'm going to completely fake this, is a program that operates like that.
+ So I just realized this is a new MacBook Pro that I didn't actually download the compiler onto it apparently.
+ So good, that will give us something to do next week.
+ But what you would have seen is the program just doing this, printing out to the screen.
+ But unfortunately, this is incredibly underwhelming certainly in the first week of a course.
+ It's much more interesting if you can actually build things that are interactive, that are animated, that play music and so forth and not just produce things on day 1 that outputs zeroes and ones like this.
+ So those are in fact the patterns of zeroes and ones, the bytes that would have been outputted had I remembered to download the compiler to this computer and run it on that little hello.
+c file.
+ But we'll do that again correctly next time.
+ But it turns out that with this language we glimpsed on Wednesday, you can do the step so much more easily and yet the ideas are identical to what we're gonna explore at a lower level in the weeks to come.
+ So this is the simplest program you can probably write in this language called Scratch.
+ Scratch is a program that you can download for free which will be posted on CS50.
+nettonight under problem sets in both standard and hacker editions, can you do the--can you--it will walk you through the process of getting this software.
+ This software now looks like this.
+ On the top right hand side is the so called stage.
+ This is where as we saw on Wednesday are sprites or our characters.
+ Our little characters are going to play or move as we instruct them to do.
+ On the left hand side is my palette of puzzle pieces or building blocks and those are the things.
+ In a moment, I'm gonna drag and drop in order to induce this right to do something.
+ And in the middle of this blank slate, in the middle, this is where my program is going to go.
+ And so as we saw on Wednesday, if I wanna just get this thing started, notice that there is this thing here when green flag clicked, that scratches version of that keyword "main".
+ So main is equivalent to this green flag.
+ What can I now do? We'll shape like a puzzle piece that will allow me to go to the looks palette at top left and it's pretty self-explanatory.
+ The categories, the colors, very quickly start to make sense when you just start poking around.
+ I'm gonna drag this thing here, zoom in, and voila, what do I now see? Well, I now have two blocks interlocked and you can pretty much guess what this is gonna do.
+ It's going to say hello and I can change this here.
+ I can change the number of seconds that it does it.
+ And if I want to detach it, I just click and drag, and now I can go back and put different puzzle pieces there altogether.
+ But it turns out though simple, though, some of these puzzle pieces actually are, we can actually start to do very interesting things very quickly.
+ So, some jargon first.
+ Computers generally have things called--computer languages generally have things called "statements".
+ A statement is an action.
+ It's an instruction.
+ It's a capability that just tells the computer what to do.
+ Much as you might instruct as a human, a robot, to do something to the extent that's currently possible.
+ So say, "Oh, hi world.
+" This would be called a statement.
+ Another one might be "wait one second" which is another building block or puzzle piece and scratch.
+ And another one might be "play sound meow.
+" So now you can start to see the things can get interesting quickly.
+ Well, let's go ahead and do that.
+ Let me go ahead and open up some of the examples that I came with.
+ All of these are available on the courses' website so you can play afterward.
+ And I'm gonna go ahead and open a file called hai2.
+sb which is the file extension for this language.
+ Now, notice in the middle, I wrote this at home already, you can pretty much read this stuff top to bottom to see what it does.
+ When green flag clicked, I'm gonna say, "Oh, hi world for a second", then wait, say it again and wait, say it again, and then that's it.
+ So let's go ahead and click the green flag.
+ And in fact, very overwhelming.
+ So let's actually start to make this more interesting.
+ Let me go ahead and instead open up what I called high3.
+ I'm gonna go ahead and say don't say it ' cause I didn't make any changes.
+ I'll play this-- Okay, getting cute.
+ You do that on loop too long, it gets really annoying quickly.
+ [Laughter] But it's just a different statement.
+ And so when you start to poke around the puzzle pieces, you see that it can say things, we'll see movement in just a moment and sound and so forth, but at the end of the day, this is just like the program we used a moment ago for the sock exercise where we just hold Philip a step after step after step, do this, do this, do that, and yet, here too, we already see an opportunity for that thing we called the loop.
+ I am meowing three times and you can very quick--easily see perhaps that this very quickly could get messy.
+ I could do a whole lot of copy-paste essentially.
+ If I want the cat meow six times, I just make a copy of this which you can do by right-clicking or control-clicking as you'll see, and then I just keep doing this and this, and this, and this, but now, what's the problem? Well, one, it just starts to look ridiculous, frankly.
+ You should acquire overtime this instinctive aversion to just code or programs that just look ugly because things that look ugly generally are not easy to maintain.
+ For instance, if I wanted to change the sound that the cat is making, my God, now I have to change it on three places but like 30 places if all I've done is copy and paste.
+ So hopefully, there's an opportunity for actually looping and, ultimately, than doing things conditionally.
+ So if you wanna do something conditionally, you generally needs to ask the question, is the following true or false.
+ In Philip's case, we ask the question, does he have zero or none zero socks on his feet? Or rather, does he have two or not two socks on his feet? That's what's called a Boolean expression named after literally a man named Boole.
+ And this puzzle piece here colored in blue because it's a Boolean expression is just something that--whose answer is either a yes or no, true or false, one or zero.
+ So notice already the parallels between the lower level details and now these higher level details, so to speak, of actually programming.
+ This Boolean expression allows you to say to scratch if you are touching the mouse pointer, the little arrow, do something.
+ How do we do something? We'll see in a moment.
+ What else can you detect as a yes or no answer is the mouse down? Yes or no.
+ That can give you a true or false, a one or a zero answer.
+ What about this? Is the number on the left less than the number on the right? That might be a question you might wanna answer or you might wanna say, is the thing on the left and the thing on the right both true? Do I have two yes answers if you wanna check two conditions at once? You know, this might seem to be a bit of a new context for some of you but consider a typical website.
+ If you've been shopping for courses on Harvard courses, the website we mentioned on Wednesday, well, you'll notice you'll recall perhaps that there's all these checkboxes, all these checkboxes that allow you to, say, you want a course in the fall or the spring, Monday, Tuesday, Wednesday, Thursday, well, now, think about even with today's basics already in mind, that this is just kind of the same idea where if you wanna look for a course that's on the fall and on Monday, Tuesday, that's like saying I want fall and Monday, and Tuesday, so each of these checkboxes is itself, really, a Boolean expression.
+ And so you see that stuff all over the place on Facebook, Google, and the like.
+ These are not foreign concepts.
+ It's just we're now slapping some new, perhaps jargon on them.
+ Now that you have the ability to ask yes or no questions, you wanna be able to branch or fork in the road based on those answers.
+ We saw this with the sock algorithm a moment ago.
+ In scratch, a condition looks a little something like this.
+ It's a puzzle piece that looks kind of small but notice there is this little funky shape up top that's the same shape as the blue blocks we've just looked at 'cause you can drag and drop that condition on top of that, and even though there's not much space in the middle here, it turns out what's nice about scratches, it will grow to fill more and more puzzle pieces.
+ If you just drag them and drag them, and drag them in there, it will keep growing to fill--to fit any such statements.
+ And you don't just have to have and if or nothing construct.
+ You can say if this is true, then go and do the following pieces of code or puzzle pieces that are inside this part of the block, else go ahead and do these that are down here.
+ And we saw this with Philip's example.
+ But sometimes there are three roads you can take and so even though it starts to look a little messy, if you do this too much, you can certainly branch this way or this way, or this way and these are what we generally call conditions.
+ Well, let's actually put these to use.
+ Here's high4.
+sb.
+ Kind of a stupid program, why? Right.
+ So this is a great way of like fulfilling the requirements of the problem step but not quite the spirit of using a condition.
+ So this is not all that interesting, but let's actually take a look at a 5th version of high that actually does something interesting.
+ Oh, it turns out there's a puzzle piece that allows you to pick a random or as we'll start calling it soon a pseudorandom number so that scratch can effectively roll a dice or flip a coin, or give you a bit of non-determinism.
+ It's the fancy way of saying this.
+ And this is useful because if you're actually writing a program that's interactive or that you want to change overtime much like you would a game, hopefully, the game is not going to have the bad guys, for instance, always standing in the same place or the rocks or whatever it is falling from the sky in the same place 'cause it would very quickly become a very tedious game.
+ Almost any game you play has some kind of randomness or pseudorandomness which means that things change overtime somewhat unpredictably.
+ So now, if I click the green flag, the program seems broken or--I don't know.
+ that's probably bigger than 5 or 6, not smaller.
+ Let's try it again.
+ Let's try it again.
+ There we go.
+ Now if I do this, an infinite number of times, we should get roughly 50/50, but now we have the ability to do things only once in awhile.
+ So now, loops.
+ You wanna do something again and again.
+ You can kind of see where the syntax is going, looks like a loop, but you can kind of put blocks inside of you, and the little arrow suggests that once you get to the bottom just like our socks example, you're gonna do the following again.
+ What else might it look like? You might be able to say and we'll see this in C and PHP as well.
+ Do the following a bunch of times, but a finite number of times which might be useful.
+ So here we have a repeat block.
+ Let's actually put this into play with the little sprite known as scratch.
+ So this is high6.
+ And now, as promised, and all even full screen, it's really annoying.
+ If we weren't so pressed for time, I kinda wanna see how long we could get away with this before it gets awkward, but [laughter] that, in fact, is an infinite loop t hat's hopefully deliberate.
+ Otherwise, it's a pretty bad mistake, but sometimes you do want an infinite loop, for instance, Microsoft Word if you use it or pages or the like on your Mac or PC.
+ These days those things constantly spell check your program for you.
+ So in a sense, that's a good infinite loop that is as long as you're using the program, it's constantly checking your grammar and spelling, and underlining things, so infinite loops aren't necessarily bad if the objective is actually being met.
+ Well, let's take a look at this high7 variant that also use loops that also uses a loop.
+ So this one is a little cute, I like to think.
+ So notice this.
+ My mouse cursor is over here on the top right, now, I touch the cat.
+ Move away.
+ So this is my--petting a cat, example.
+ Well, how does this work? We'll notice, it's just a few puzzle pieces.
+ I'm forever watching the situation.
+ And now, if I'm touching mouse pointer, we saw that Boolean expression before, play sound meow, wait a couple of seconds, and then just keep checking.
+ So if I left my cursor there like you're petting the cat, it would just keep meowing and meowing every two seconds, but if I move it away, that Boolean expression becomes false or zero and so we don't do it again.
+ And just to be clear, you can disassemble these programs, you can move this thing over here.
+ It's all about dragging and dropping which is, to say, is very intuitive.
+ If you think of the idea, you think of the basic logic, and then you go ahead and drag and drop accordingly.
+ Let's look at this 8th variance of this, otherwise, simple example.
+ Well, this one was me having a little fun here.
+ So play-- Cat meows ad nauseam.
+ But touch the cat and--[sound effects] [laughter].
+ So don't touch this particular cat.
+ So how is this working? Well, again, I'm not spending too much time on the specifics because again, it should hopefully startâit was, oh, that's kind of intuitive.
+ If something is true do this, else something is true, do that.
+ Well, what are some of the other constructs we're gonna have access to starting with scratch and see? Well, certainly, variables.
+ If you want to maintain states, that is, to say, remember some value, well, you can use what's called a variable and here's what it looks like in this language called scratch.
+ Now, who cares about variables Xs and Ys and all these? Well, what about a game? Anything where you're actually keeping track of something like a score that's having a variable that you increment plus, plus, or decrement, minus, minus, using the appropriate puzzle piece could certainly be compelling.
+ Suppose you want a character to move around the screen and collect things.
+ So it doesn't make sense to just use a number 'cause you wantthis character to collect something from here or here,or there.
+ Well, you can use what's called an array which is kind of a list or a little satchel of that you might physically carry that you can put things in again and again, and with an array can you actually keep track of not just numbers but any kinds of things, other sprites or other pictures, or perhaps a little something like this.
+ Let me go ahead and pull up this little example here.
+ It looks like we're dwelling on only the most simple.
+ Go ahead and click the green flag.
+ You'll see this was written by a former student of ours.
+ Notice the top left is a picture of inventory.
+ That's just a graphical incarnation of this thing called an array and notice, the games can, in fact, interact with a human much like Wednesday, I'm leaving my house.
+ Oh, here are some cherries.
+ Oh, look.
+ In my array at top left, they have now cherries in it.
+ Let's see what this is, probably an orange.
+ Let me go over here.
+ And now think about how you do this.
+ If right arrow key down, move right.
+ If right arrow key down, move right.
+ If touching sign, display this little cartoon bubble.
+ So let me go get the pine apple, let me go get the bananas.
+ Let me go get the apple.
+ I think I--where do I have to go, the fruit place? Oh, there's a man at the store and now we have a loop where he is just looking through my inventory one at a time and reciting what it is I actually picked up.
+ Well, what more can we do with some of these fundamentals? Well, with arrays and the like, after arrays and the like, we have these things called threads.
+ So thankfully, you can do multiple things at once in a program because of what we'll call threads.
+ Here is an example in just a moment of a program, a scratch project, so to speak, with two sprites;
+ one bird and one cat, and what this means is that even though the interface is getting a little complicated, realize the student did this with baby steps, implements in a little bit of this, a little bit of this, and then over time, it grows to be a pretty impressive program, but it starts off as just a clean slate.
+ Notice at the bottom right here, we have all these different icons.
+ I can click on this guy to see what sprites are controlling him.
+ Here is where the guy yawned.
+ It's because of that script.
+ I can click on the cherries and see what they're doing, you know, not all that much.
+ They're just sitting there, but they are listening for something we'll see in a moment.
+ But let me go ahead and open up, let's say, this cat example, move two--you can even have different sprites interact with each other much like this.
+ Now, all the cat is doing is that it's an infinite loop and it's checking if I am not facing bird, face bird, and it's [noise]-- It's constantly chasing the bird.
+ And so now, you have two threads so to speak, two miniature programs, two sprites all interacting with one another.
+ You can do other things too, and I know I'm flying through these but only because it's more fun to play hands-on on your ownâ oh, actually, this guy is kinda funny.
+ Let's play this.
+ This is all he does.
+ But again, it hints with these fundamentals.
+ You've got a loop, you've got a condition and a boolean to check if he's touching the edge, and some statements to tell him to shout or to actually turn around.
+ So what more is there? There are also these things called events in programming, and specifically, scratch, whereby you can have two sprites such as this boy and this girl, and when you actually hit the spacebar with the likeâ oops--if you actually hit the spacebar or the like, one sprite can do something, and then the other sprite can do something in response because in addition to When Green Flag Clicked, there's also this kind of starting point, this alternative to main that says When I Receive Event In other words, you can pass sort of secret messages or notes between sprites by giving them a name, like in this case, events, and then having one talk to the other.
+ So this is a simple incarnation of that game you might know as Marco Polo.
+ Now, in Problem Set Zero, well, you get to play with exactly these things and in the hacker edition if you so choose, can you play with one of these things.
+ I taught I'd demo just a couple little snippets with this.
+ So to be clear, we expect most students to very comfortably pursue the standard edition of the P set, but for this particular P set, the hacker edition gives youâ and we have about 150 or so of these out on the hallway, and we'll have them at office hours throughout the coming week--this is a little logic board with lots of sensors;
+ the sound sensor, a light sensor, a little joystick and the like.
+ And now, that you have not just the keyboard, but a device like this connected via USB can you do something like this, like a former student did.
+ This is a little game--and again, don't be overwhelmed by the complexity.
+ It's all about building up bytes after bytes-- So I'm now moving the joystick, and the goal of this game is not to hit --oh, to get the bananas, but now I've been stunned, there's the man that fell from the ceiling on Wednesday, and it's responding to the joystick.
+ You can do other things too though, when you have sound.
+ For instance, let me go ahead and open up masquerade, and I'll need Barry to help here, if you don't mind.
+ Let me hit play.
+ So here, we have--come on.
+ Wait, don't do that yet.
+ Come on.
+ I need more lights.
+ Wait a minute.
+ We can solve this.
+ It's a little dark in here as well.
+ Okay.
+ It's very nice and beautiful, daylight outside, and Barry, could you kill the lights? So can you actually detect sound in this way? Let me stop playing this since it will just go on ad nauseam as well.
+ So what does this actually mean for you? So with problems at zero, which will be posted in two forms;
+ PDF for standard and PDF for hacker on cs50.
+net tonight, you will have the choice of implementing pretty much any scratch projects you can think of, and which subject to very few constraints.
+ At the end of the day, the goal is to make something that's of interest to you, fun for you, and you'll see at cs50.
+net/ohs for office hours, what the schedule is therefore.
+ And let me conclude with this, you have an amazing 10 weeks ahead of you.
+ And so, we will see you if I time this correctly on Wednesday.

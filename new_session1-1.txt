@@ -1,0 +1,1042 @@
+>> Hello this is CS50 my name is David Malan
+and I will be your instructor this semester;
+and some of you are here because you saw someone tear a phone
+book in half at something
+called Harvard Thinks Big last year;
+and some of you may be here
+because you've been using a little tool called
+on your shopping list.
+But whatever your reason for being here this is
+in fact our introduction to Computer Science; and contrary
+to what you might have heard or seen or perceived
+in high school, odds are computer science is not quite
+what you imagined it to be.
+First and foremost it is not ultimately
+about programming even though this is unfortunately the
+message that's conveyed, but in light of a lot
+of high school curricula rather, programming is just a tool
+that computer scientists and engineers
+and increasingly humanists and folks from all sorts
+of fields use to actually solve problems of interest to them.
+The programming aspect is just a means to an end;
+and so this phone book in my hand is just representative
+to a problem one person might solve,
+completely non-digital this one,
+but very much real world whereby there is some person
+or something in a large chunk of data here; thousand
+or more pages of text and I want to find someone like Mike Smith.
+Now at Harvard Thinks Big I happened to tear
+into this thing myself and it would seem a little pointless
+to re-hash that same demo
+so instead I thought I'd solicit an ideally sufficiently strong
+volunteer to come on up.
+You have to be comfy on camera but this is your first chance
+to say hello to mom and dad on camera.
+One volunteer, yes come on up what's your name?
+>> Sumit
+>> Sumit, all right come on up
+and if you could awkwardly hold this up front here for a moment.
+[ Applause ]
+>> So if you want to just hang here
+for just a moment let's walk through the problem at hand.
+I'm looking for Mike Smith.
+There are some thousand pages in this book,
+and I the human could certainly find Mike Smith every easily,
+very correctly by starting, if you'll simulate from the front
+of the phone book on page 1, looking for Mike Smith.
+where the A's simply are so I turn to the B's and the C's
+and the D's and so forth and finally I get to the S's
+but in the worst case I've looked
+through 1,000 or so pages.
+Now you the smart human
+with just gut instincts probably would not be so naive
+as to start from the left and work your way forward.
+What would you do?
+>> Dive right into the middle.
+>> So dive right into the middle
+so if you would now simulate would a typical human might do,
+where would you dive in first to find Mike Smith?
+All right so roughly into the middle (oh this will be
+over too fast) roughly into the middle
+and at this point you realize what letter
+of the alphabet are you on?
+>> Student: L.
+>> David: All right so we're on L so roughly half way through;
+so the intuitive now is of course that Mike is not
+to the left of the phone book because that's L and prior,
+but rather he is to the right
+so we can literally tear this problem in half--
+cue tearing-- cue tearing.
+>> Student: Are you serious?
+>> David: I am very serious.
+I need you tear not the page out;
+I need you to tear this phone book in half
+in front of 500 of your peers.
+[ Applause ] >> David: Excellent.
+So we've now whittled this problem down into half
+and so we can literally
+and dramatically throw half of the problem away.
+So now we're left with a problem that's but 500 pages large
+and so what might a human do now to find Mike even more closely?
+Dive in straight to the half again
+and so now we end up on what letter?
+>> Student: P.
+>> David: So P so we're getting closer but we're not quite there
+yet and so we tear this problem in half, whittling that problem
+down although it is getting a little easier;
+whittling the problem down further into half
+and if we do this again and again and again we've gone
+from 1,000 pages, to 500 pages, to 250 to 125 and so forth;
+and so after just a few relatively speaking
+of these page tears we've hopefully found Mike Smith's
+location; and so in computer science terms we actually say
+that this algorithm or this process,
+this program is logarithmic.
+You might remember vaguely logarithms
+from high school math
+and such but what this suggests for us ,
+the computer scientists, is
+that this is certainly a smarter, a faster algorithm.
+So put this into perspective, imagine now not a phone book
+with 1,000 pages but like a search engine's index
+with say 1 million pages or even bigger, 4 billion pages,
+which isn't even as many web pages as might be out there
+so if you have 4 billion
+of something how many times could you tear a 4 billion page
+phone book in half, in half,
+in half until you find the person you're looking for?
+Anyone? How many times can you tear
+a 4 billion page phone book in half?
+It's 33, 32, it's only 32 times and you can check that math
+at home but here lies the power of algorithmic thinking,
+of computational thinking as they say.
+You can take a problem that might be relatively intuitive
+to solve but when you scale this thing
+up as is increasingly the case in the web,
+in large data systems, and so forth, you actually have
+to now think smart,
+you actually have to think efficiently
+and you have to solve this problem effectively.
+And that is ultimately
+what Computer Science 50 is going to be about.
+A big round of applause for our volunteer here.
+[ Applause ] >> David: Thank you.
+We have this one parting gift--
+just a little legal waiver for the cameras if you would.
+So let's not put him only on the spot; there's a whole bunch
+of us in this room and we can actually apply this same idea
+not to these phone books but actually
+to other real world problems, there's a whole bunch
+of people in this room.
+And frankly it would be incredibly time-consuming
+and tedious for me, to count this room full
+of people old school style-- 1, 2, 3 and so forth.
+So what do you do when you're a kid and you want
+and 4 what is the simplest thing you do?
+So try 2 4, 6, 8 and that's good right?
+This is not to belittle that simplicity
+of the idea; that's wonderful.
+It literally halves the amount of time it takes to solve
+that problem but we can actually do better.
+So I propose this algorithm,
+this program, this process
+for counting people in this room.
+In a moment I'm going to ask you
+to humor us and stand up
+but not just yet; and then you're going to each take
+on the number 1-- think to yourself I am number 1.
+Then you're going to pair off
+with someone else who's standing next to you, you're going
+to sum your numbers together and one
+of you whoever is fastest probably is going to sit down
+and the other person is going to take on his or her number,
+the summation of those numbers; and then you're going to repeat
+and if you follow the logic here in just a few moments,
+there should be just one of you very awkwardly standing.
+So if you would everyone stand up,
+take on the number 1 and go.
+[Talking and music]
+>> All right at this point I see 1,
+2 lone souls standing; anyone else?
+3, all right so you have two partners potentially, 4 of you,
+this should be easy then.
+Oh end up there, anyone else need a partner up there?
+Hence the title of this slide all right so 2,
+we've got you two paired off?
+Okay so exchange numbers; okay good half
+of that problem is gone now
+we have just these two left.
+Yes? Oh 3 okay.
+This is when the addition
+gets very publically awkward so.
+[ Laughter and Applause ]
+>> Okay 210 and?
+>> Student: 233.
+>> Wow 210 and 233 and the total
+that the teaching fellows got was 550 give or take
+so a little take maybe, but let's call it a success.
+Congrats to yourself here.
+[ Applause ]
+>> So now that might not have felt like the fastest algorithm
+but think about what you could have done with that algorithm
+in each iteration, much like the phonebook up front here,
+you literally split that problem in two
+because on each iteration roughly half of you were sitting
+down and then another half and then another half.
+So even though we might have started
+with 500 some odd people,
+it very quickly became a 250 person problem
+and then a 125 person problem.
+And so in theory after just 2 or 3 steps you were in order
+of magnitude farther along in this counting process
+than I would be because I'd still be
+on person literally 3 or 4.
+Now consider suppose a whole another 500 people walk
+into this room suddenly, now there's 1,000 people.
+Well how many more steps does this algorithm take?
+Well here is the power-- 1.
+And that's when things really get interesting
+and so this just hints at the types of thinking
+that one can derive from the field of computer science
+and apply either to the field itself of computer science,
+or whatever domain it is that you are here too study.
+So where can you actually apply these kinds of tricks?
+Well a number of you have spent this past week playing
+with this particular tool
+which is a project the course has been working
+on for some time in an effort to make it easier and more social
+to actually shop for courses.
+A natural question the first week
+of school is what are you shopping?
+Well our goal here was to answer that question for people
+and then hopefully facilitate friends getting together,
+shopping courses with each other, for each other,
+picking up syllabi and thus was born what we dub
+Harvard Courses.
+For those unfamiliar this is a website at courses.cs50.net
+and has the entire Harvard Course catalog in it
+and what it has at top left
+as you might see is definitely your Facebook login button.
+Simply by clicking that link you can then log into your account;
+and then on the left hand side what appears is a little menu
+of all of your friends who are also using this tool
+and you can select any one of them and actually see what
+that person is shopping.
+You can search obviously by any of the fields up top by days
+of the week you want a class;
+days of the week you don't want a class; grad level
+or undergrad level, faculty scores that are 4.0 and higher,
+course overall scores that are 4.0 and higher;
+and a whole number of other features including
+synchronization with Google calendar.
+And this is exactly the kind of project that everyone
+in this room 11 weeks hence could absolutely tackle
+as a final project.
+The pieces that we pulled off the shelf here were ultimately
+reduced to things like 4 loops and what we'll call functions
+and what we'll call abstraction; and all these fundamentals
+that at first glance might have some fairly RK
+and jargon associated with them.
+At the end of the day this is all about equipping you
+with skills and knowledge and understanding with which
+to take a problem, take a large data set maybe
+and actually produce something useful--
+produce a project that is of interest to you.
+Fun facts for those of you who might have been diving
+into this application already, I looked through the logs
+and the statistics that we maintain on the site
+to get a sense of what's working well and what's not
+and some fun facts include these--
+11,782 courses are on shopping list at the moment;
+1,384 Harvard Facebook users are actively using this;
+607 people have synchronized their shopping schedules
+with Google Calendar, and for the curious if you want
+to decide if you are average in terms
+of how much shopping you're doing, 10 is the average number
+of courses as best we can tell that a student is shopping
+and it wouldn't be a fun fact
+if we also didn't look at the scary fact.
+The maximum number of courses someone
+on this campus is shopping this week
+on down so that is quite a lot of shopping to do.
+So you see a problem like this in the real world;
+you see a problem on campus you might want to solve.
+Ultimately you'll end
+up employing something called programming,
+the act of constructing, telling a computer to do your bidding.
+Well what form does this actually take?
+Well in this course you'll see over the course
+of the next several weeks a number of languages;
+because here too is there an interest in takeaway;
+what language you learn in an introductory course,
+what languages you know is not so much important
+as it is understanding how these languages work, learning one
+or two different types of languages
+and then very easily can you parlay your skills in a language
+like C or PHP or JAVA or any other number
+of languages to others.
+And so what's really empowering about this particular course is
+that it ultimately one of the goals is
+to help you help yourself; so that even if 50 proves
+to be a terminal course for you, you decide CS is not necessarily
+for me, you none the less exit this course with a whole bunch
+of skills and savvy that you can go off
+and apply wherever it is you're most interested in.
+In fact I just met a few weeks ago with a former student
+who is not a computer scientist, not even an engineering student;
+he's actually pre-med and he was working for some MDs this summer
+and they had gave him a huge text file
+containing like tens
+of thousands of patient records, and tens of thousands
+of doctor records, and they asked him just one semester
+ahead of CS50 can you tell us exactly which patients met
+with which doctors and how many times?
+All right this is kind
+of the Microsoft Excel problem from hell here right?
+Like how can you possibly figure that out
+with actually compelling a machine to do it for you
+and sure enough we chatted for a few moments,
+I kind of gently pointed out well it's kind
+of like problem 7 last year.
+And so sure enough he took this really large text file,
+he wrote a program in a language called PHP that's not even
+that long, a few lines of code yeah big, ran that big data file
+through it, imported it into what's called a database
+which is really just a super fancy version of Microsoft Excel
+or similar, and then he was able to write lines of code
+that allowed him to select some patients, select some doctors
+and look at where the intersection was
+so that the output for his bosses was exactly the answer
+they were looking for.
+It's just not possible to solve some of these problems by hand
+and this isn't even a domain that's necessarily
+into the world of CS but speaks
+to you the applicability of it all.
+So what does it mean to actually program?
+Well within the next few weeks we will dive into all sorts
+of languages but the first one is a little something
+called Scratch.
+It turns out that Scratch, a programming language developed
+by MIT's media lab, provides us with a nice,
+sort of user friendly graphical environment
+that thought it might look rather cute,
+it really is just a pictorial incarnation
+of the very same ideas we're going to be exploring next week
+with just a blinking cursor and text.
+We'll come full circle later in the semester and actually begin
+to create things just as animated again.
+Programming in this context boils
+down to telling the computer what to do.
+So on the left hand side of this particular languages environment
+I have some puzzle pieces and they are shaped and colored
+in a manner that hints out their functionality;
+any blocks that tell the Cat as we'll see in a moment,
+what to do something happen to be orange.
+Anything that tells him to sense something like the user's mouse
+or the edge of his screen is actually purple in color;
+and so they're nicely colorized and all this
+but the one that's adventurous right now is this.
+It's a little puzzle piece that says
+when the green flag is clicked and this is kind
+of like the beginning of a program;
+when you double click an icon
+on your desktop this is how something
+like that is implemented; it's listening for that double click,
+it's listening for that green flag.
+I'm going to go ahead and change
+to this Looks pallet over here.
+There's a whole bunch of blocks that we'll look
+at in more fun detail on Friday but I'm going
+to pick the easiest one here and I'm going to type
+in this string, "Hello CS50",
+zooming in say how nice the puzzle pieces are
+nicely interlocked?
+And then here is this green flag, I go up here and click,
+and sure enough hello CS50 and this is a program--
+trivial though this is, this hints at the relative ease
+with which you can start wiring your thoughts together,
+instructing a computer line by line to do something for you;
+and we can very quickly go from something simple like this
+to something much more dynamic with a few more puzzle pieces
+but something that testament to what you can achieve
+in just a few weeks was implemented
+by a former student in a prior term.
+I give you a little animation that was implemented
+with this programming language
+in just a night called Raining Men.
+[ Music ]
+[ Applause ]
+>> So what you start to see even in programs like this,
+that they're actually very methodical underneath the hood
+and even though at first glance you might think to yourself,
+"I have never done anything like that, I've never used a program
+that hasn't been re-informing," if you start to look closely
+at what's up on the screen, you realize oh if I just focus
+on one of those singers at first, I first have this sprite
+as it's called, this animated character, but it's not animated
+by default much like the cat didn't move
+and so I need something that we'll call a loop--
+something that makes this sprite move from side to side
+but I can't let it go all the way to the edge.
+As soon as I detect with what we'll call a condition
+if I'm touching the edge I have to essentially spin
+around 180 degrees and then continue looping.
+And so with these basic building blocks, can you build
+up much more interesting things and they don't have
+to be static animations like this.
+You can even implement your own versions of some
+of the most popular console games today
+for which I need another volunteer.
+Yes come on up.
+What's your name?
+>> Fox
+>> Fox come on up and for you we have-- come on up yep--
+so the keyboard this time
+for you we have Scratch, Scratch Revolution.
+So in a moment you're going to go ahead and hit the spacebar
+and then as things fall from the screen when they line
+up with the left arrow, hit the left arrow
+with a different arrow, hit that arrow
+and see how good a score you can get.
+So whenever you are ready hit the space.
+[ Music ]
+>> A big round of applause.
+Very well done. [ Applause ]
+>> So this tune made by one of our former students;
+but it doesn't have to be something written in Scratch,
+it doesn't have to be a game
+or animation it can simply be an incredibly,
+wonderfully way to spend time.
+So this is perhaps a site that some
+of you have spent way too much time on last year,
+if not in the past week or so,
+this is isawyouharvard.com.
+This was made by Tej Toor,
+an economics concentrator in Mather House,
+this past year for her final project;
+and Tej prior to 50 had never programmed before
+and she found herself completely ill-prepared for final exams
+as a result of this thing having taken off the night before the
+CS50 Fair which we'll discuss in just a bit;
+before which she sent out an e-mail to her house list
+and bam--a thousand posts later was she scrambling
+to add features, add functionality
+or start moderating some of the posts.
+It was a wonderfully good problem to have this too
+at the culmination of just a few weeks.
+So what are the expectations
+over the course of these few weeks?
+To attend these lectures in sections--
+more on that in a moment; to submit 9 problem sets,
+take two quizzes and ultimately design a final project.
+A word about grades-- you may in fact take this course pass-fail.
+In fact one of the frankly best things I ever did
+as an undergraduate was, perhaps fittingly,
+take this course pass-fail.
+I was an undergraduate here in 1995 as a freshman,
+I came in thinking I was going to major in government
+and sure enough I started off on the track; I'd like history,
+I'd like government, English,
+these kinds of things in high school.
+I knew from the relatively limited set of course offerings
+that my school had the things I felt I was good at
+and so I went off on the path.
+I was curious; I was even a user assistant at the time,
+I was certainly a geek at the time and
+yet I had no sense really of what actually went
+on in a classroom like this.
+In fact I used to glance in the window
+at the computer science classes that my high school had
+that some of my friends were taking,
+and they just weren't interesting,
+the problems they were working on were
+like adding some numbers together and moving a cursor
+around the screen-- it was incredibly underwhelming
+and it wasn't until I dived
+into this particular course sophomore year,
+having only gotten over the threshold of discomfort
+by filling out a little pink slip like this that said I'd
+like to enroll in this course pass-fail,
+but I honestly had the courage to venture
+out beyond my comfort zone.
+And five weeks less one day later I decided you know what
+this might actually be for me and I switched from pass-fail
+to letter graded status at that point in time.
+It's an unfortunate thing I think pedagogically
+at this school that there's really not this mindset,
+this mentality on campus that actually exploring new waters,
+perhaps by way of mechanisms
+like pass-fail is actually the norm; I think it's just not part
+of the culture here and I also think that there saying
+in a demographic like this there's perhaps this
+disinclination to say,
+especially when you need an instructor's signature I would
+like to take this course pass-fail,
+let's you think quite reasonably that your peers might think
+that maybe you're taking it pass-fail because you can't
+in fact cut it in a course like this.
+And this is absolutely not true;
+it's for the most part the entire freshman year
+for instance at MIT is taking pass-fail.
+You can similarly explore your sophomore year
+and Harvard thankfully does have this mechanism.
+And so ultimately one of the messages we'd
+like to send today is that if you are the type who's kind
+of on-the-fence don't think this is for you,
+worried about hurting your GPA or anything like that.
+Realize that there's this wonderful mechanism in place
+that allows you to put your toe in the water
+for several weeks no less and then get a sense,
+and then decide whether or not this is something for you.
+So you may take this course ultimately via pass-fail
+or letter grade and I am more than happy to chat with you
+about the implications and to sign any paper work
+such as the stack here that you might need.
+So what are you all like?
+If history is any indication 72% of the people
+in the theater have no prior programming experience;
+despite what you may think and despite the fact that some
+of you may very well be thinking,
+odds are I know the least about computers than anyone in here,
+I'm actually a little scared of my computer.
+There are lots of other people in this course
+and there have been lots of other people
+in this course like you.
+The chart you see here suggests that 72%
+of last year's students had zero prior computer
+science background.
+Moreover there really isn't a typical student in this course.
+We asked students as we will this year
+to describe themselves based on gut instinct early on,
+do you consider yourselves among those less comfortable
+with computers or just the mere idea of being in this class?
+Are you among those more comfortable,
+have you taken any computer science, were you programming
+at the age of 10 but you'd actually like to learn a bit
+about things you don't yet know
+and challenge yourself
+with new content or are you somewhere in between?
+And so the breakdown that we've had in past terms are just
+under half of the students describe themselves
+as among those less comfortable just
+over 10% among those more comfortable,
+and then with the remaining students are indeed somewhere
+in between.
+And what the course has done to accommodate these varying levels
+of background that come into this course,
+is we offer not only multiple tracks
+so to speak of sections, we'll see in a moment
+that we have different tracts for students less comfortable,
+more comfortable and somewhere in between,
+and particularly
+for those students more comfortable who are coming
+in with say an AP computer science background,
+may very well know some of the content on the syllabus but like
+to push themselves further.
+Do we offer what we dub packer editions of problem sets
+which extensively cover the same material
+but with a more technical sophistication,
+with more detail, and these are simply options that students
+in this course can elect as per the syllabus.
+So there are also an increasing number of women
+in computer science and particular this course
+which we are thrilled about.
+Over the past couple of years there have been record numbers
+of women enrolling in CS50 specifically
+up from single digits and 20% range years past;
+and this is wonderful because we absolutely think despite the
+faces you may see in high school classes, the faces you may see
+in industry and the press, it is absolutely a field
+that is equally accessible to men and women alike
+so it is 50-50 that we hope to see as a result
+of that reality before long.
+So what is it you actually do?
+As much as I might talk on stage twice a week it turns
+out that it's really by doing and really by diving in
+and getting your hands dirty
+that you really take away the course's lessons.
+Last year for the pieces that do vary year to year a bit,
+last year's first problem set challenged students
+to write their first or maybe second
+or third program using this environment called Scratch.
+And after just a few words on Scratch which we'll look
+at in more detail on Friday will you actually feel
+that you know what, this is actually very intuitive.
+Once you know what pieces to look for, what mental constructs
+to reach for, can you realize all right I want
+to make some dancing figures go back and forth,
+I need to loop this way and loop this way
+and check if I'm
+on the edge and so forth.
+You begin to realize that all
+of these big seemingly complicated pieces of software
+in websites that you use, if you just hone in on little pieces
+of them at a time and you realize oh I can do
+that and oh I can do that.
+And then really the fun begins
+when you realize all you have
+to do is now start wiring these ideas together;
+wiring these little bite size problems together and so
+in the end that actually make, per Tej's project,
+a really impressive whole.
+And for Problem Set 0, too, those of you might think Scratch kind
+of imploding since I was 6, well then we'll hand you some
+of these little logic boards which are a variety
+of real world sensors you can connect to your Mac or PC
+and push yourself a little further
+with interactions, with the real world.
+In problem set 1 last year we introduced students to C,
+this is the language we use for a good deal
+of the course before we transition it or it turns
+into a web program but you'll implement a number of problems
+that really get you comfortable
+in what's called the command line environment for lack
+of a more friendly sounding term;
+and an environment called Linux or UNEX
+and really this is not something that might be as foreign to you
+in a week as might be right now.
+We introduce throughout this semester real world
+problem domains.
+Last year we challenged students
+to implement their own encryptions ciphers that's
+perhaps a common need these days to want to scramble or encrypt,
+to secure your information; whether it's a credit card,
+whether it's instant messages, or e-mails;
+simply any kind
+of information you don't want people to see--
+well we talk about how you yourselves
+in the second week can implement some of these so-called ciphers
+with which to protect your own privacy and security.
+The week after we implemented the so-called game of 15,
+this little party favor
+where you move the numbers up, down, left or right.
+In just a couple of weeks can you start implementing things
+that take input from users; and if you really want
+to push yourselves with that particular week can you
+implement what we dub God mode.
+You can play not against yourself;
+you can program the computer to play against yourself--
+you can program the computer to play against you.
+And so that's a little something for those
+of you more comfortable.
+And then Sudoku we did last year
+where it actually becomes a little more interesting
+where we start providing students not with a blank slate,
+but with some distribution code.
+We hand you a bunch of programming code that we wrote
+because this is very much the norm in the real world.
+You're not going to start for the rest of your life
+if you ever need to solve a problem with a computer
+from scratch, odds are you're going to reach
+for some off the shelf packages or libraries or tools
+that other people wrote so that people like us don't have
+to reinvent the wheel again and again.
+What do I mean by wheel?
+If you want to get some input from the user,
+my God I don't want to have to program it to low level zero
+and 1 just to get keys from the keyboard;
+please let there have been someone who does that for me
+and indeed there are an increasingly sophisticated
+options that you can pull off the shelf.
+In problem set 5, last year I took a stroll around campus
+with one of the teaching fellows with his digital camera,
+we shot photographs of identifiable
+but non-obvious spots on campus and then
+like an idiot I always seem
+to erase my compact flashcard accidentally.
+But no matter, I spent a year
+in graduate school doing forensic research and working
+for the local Middlesex DA's office where I learned how
+to make a so-called forensic image
+of a digital camera's media card.
+And so we do this very much real world, we grab all of the 0's
+and 1's that have been erased or mangled somehow by my mistake,
+I then hand that to every student in the class a file
+that contains all of those 0's and 1's
+and they're then challenged to recover those jpegs
+by writing a program from the start of those 0's and 1's
+to the end of them, looking for the patterns that it turns
+out identify these things all of you know as jpegs or photographs
+that you probably everyday upload or look at on sites
+like Facebook and the like.
+It turns out they're relatively simple to find even
+when they've been deleted whether accidentally
+or in some cases intentionally--
+that too is part of the job undeleting things
+that people had deleted.
+And then we hand you 140,000 English words in the form
+of a big text file much like our aspiring pre-med students
+in recent months, and we challenge you
+to implement the fastest spellchecker possible.
+We challenge you to use little RAM, memory as few CPU cycles
+to write your program as fast as possible
+and the funny thing here is, is that this tends
+to be historically the piece
+that students put the most time into;
+not at all because it requires the most time;
+not at all because it's the hardest or anything like that,
+but because we add on an often basis those sufficiently
+comfortable with the idea of displaying their name
+on the course's website you can choose
+to show your running time; show the amount of RAM you're using
+on the course's homepage,
+and it's this fascinating pedagogical motivational tool
+where you do this.
+You then go to dinner, you come back and you realize
+that your roommate has now vested you by five seconds
+and three hours later you've inched ahead again
+so it's a wonderfully motivational tool;
+and speaks to just how addictive frankly this stuff was
+and that too for me.
+And this may or may not be the case for you yourself,
+but one of the realizations I had in college
+when venturing beyond
+my comfort zone engulfed toward these
+waters of CS was wow like there's no cliche.
+Like homework for me at the time was actually fun
+and there is some addictive about this;
+and I even asked Tej during last year's final exam period.
+And then toward the end of the semester do we transition away
+from this lower level language
+known as C and certainly Scratch
+to things more familiar.
+Towards the end of the semester do we introduce what languages
+like PHP and SQL, HTML, CSS, to varying degrees,
+but with them can you implement the same kinds of ideas
+that you might have in your mind in the context of a web page.
+in the context of a web page. And increasingly that is
+where the human computer interaction is,
+and so will you be empowered by terms and not to just
+to make a website per se but to make an application,
+something that's of interest to you,
+something that solves problems,
+something that lets you tell someone
+through the most electronic means possible
+that you saw them somewhere on campus.
+In the case of last year we did hand students some code
+with which they could write programs that talked
+to Yahoo Finance, finance.yahoo.com, free website.
+Turns out they make stock data and the
+like available essentially via text files
+or via a simple API application programming interface
+which will be one of the themes of the course.
+And with this data, where students were able
+to implement last year their own E-trade-like website;
+whereby you have accounts and you log in your hand age
+of your users 10,000 virtual dollars
+and with them can they get stock quotes, by stocks, sell stocks
+and the like, all of this accomplished just
+after a few weeks time.
+And last year to did we hand students Google maps,
+Google news, asked them to mash those two very familiar real
+world products together so that they had a map
+of the United States, little markers sprinkled throughout,
+that indicated exactly
+where there were current events going on.
+So how do we get you from for many of you zero
+to 60 miles per hour after just 11 weeks,
+well like many courses here is the course structured
+around not only lectures for conceptual introductions,
+but sections, office hours and walkthroughs.
+So in sections where you have the opportunity to work
+in smaller environments with one of the teaching fellows,
+in office hours we have an opportunity to work one on one,
+hands-on in the computer lab or else we're on campus
+and really get personalized attention when it comes
+to diving into these problems.
+And similarly, particularly for those less comfortable,
+do we offer prior to the start of each week for a new piece
+at what we dub a walkthrough whereby one
+of the teaching fellows will literally start
+on the first page, give you a mental framework
+for the week's problems and talk about the ideas that it covers,
+and then walk through the piece set so that you have a roadmap
+of sorts that you can follow.
+So that you're not just handed something that's entirely new
+to you with no idea which direction to go,
+we actually do set you off on an appropriate path.
+And towards that end to give you a sense of the size
+of the support structure in place for this course,
+this is the size at the moment of CS50's staff inclusive
+of teaching fellows, course assistants, myself,
+as well as folks who help
+with our video production and the like.
+who return to the course for a couple
+of hours a week having taken it in prior years, to help you,
+the newest batch of students, one on one with office hours,
+with problem sets; and similarly do the CS function
+as they might in many courses.
+Office hours tend to happen in this very beautiful place,
+at least beautiful according to this picture, never quite feels
+like that when you're walking in to it; but we're very excited
+to say that one of the directions
+in which the Harvard School of Engineering
+which is a relatively new entity
+on campus has been putting together this summer
+with four undergraduates on campus social and learning
+and teaching space; whereby the goal is
+to actually provide students like yourselves
+with an opportunity to interact with each other whether it's
+to work on P sets, talk, relax, and as you'll see game.
+It turns out that this space
+to which you'll have access throughout the year dubbed the
+lounge, has not only white boards and screens
+for teaching purposes; we may have also slipped in an Xbox,
+a Wii and the PlayStation
+which actually does help make homework fun.
+Thanks to some friends there's a foosball table,
+there's a candy machine
+and there's also a cat in the ceiling.
+So the so-called lounge what you'll be able to find
+in just a week or so is timed with the first
+of the office hours if you so choose to join us for them.
+Also one of the most useful resources you'll find is the
+course's website; where not only will the obvious be posted
+like handouts and such, pests in the syllabus,
+but there will also be a variety of tools that you can turn
+to over the course
+of the semester including our own videos.
+As you can tell from the cameras, the course is
+in fact filmed for reasons of distance education
+and your benefit for review; we've been working
+on this past summer what we dubbed cs50.tv
+which is our own delivery mechanism for these videos.
+Though this is always a bit awkward since you're
+about to see myself seeing myself,
+we have put together this new
+and improved user interface this year whereby
+after a few days time will each lecture be available via the
+website, and which you'll notice too flanking it
+on the right hand side will be a complete English transcript
+of everything that comes up during lecture.
+And so being computer scientists,
+that we read a little code
+that synchronizes the words that are highlighted in the screen
+with the words that though on this very dark screen are coming
+out of my mouth in your hands
+we also thought it would be a little fun just partly
+because we can, and partly for accessibility purposes
+for folks
+who might tune into the course's open courseware material thanks
+to Google translate, do I now speak nearly fluent Spanish.
+If you'd like to see me subtitled
+in Spanish can you actually watch CS50 this year in Spanish
+and soon two dozen languages?
+It's imperfect, though the English is quite spot on,
+I call myself during this lecture a couple
+of times a major government
+because gov major didn't quite translate very perfectly.
+So what can you expect in terms of the preparation
+and the fundamentals that will empower you ultimately
+to tackle projects like these?
+Well this Friday when we start our lucky computer science
+itself and introduce Scratch,
+the programming language
+in an environment we looked at,
+but also some of the fundamentals
+that we'll lace throughout the course.
+In week 1 computer scientists for those unindoctrinated yet,
+start counting from 0 typically,
+you may notice the astute
+that when we did our self-counting exercise I had
+to number the steps from 1 to 4;
+which is perhaps the norm for normal people anyway;
+but with Week 1 we'll look at C
+and some of the basics
+of computer science as they relate
+to actually manipulating a computer.
+In Week 2 we'll look at things like cryptography and functions
+and the tools that by which
+you begin to assemble solutions
+to problems; in Week 3 we'll introduce
+what are generally
+known as algorithms and data structures;
+mechanisms by which you can solve problems
+more efficiently, effectively.
+What we'll introduce in Week 4 additional lower level details
+which really interesting about a computer is
+that there are these very familiar things like RAM
+and disk space and the like, but it terns out with just a modicum
+of experience with manipulating the computer by way
+of programming, can you actually now use that memory
+as you see fit, put 0's and 1's in data wherever you see fit;
+and in the case of the forensic problem set even extract it
+as someone perhaps did not want you to find.
+For those perhaps familiar with some
+of the jargon do we introduce what we call link lists
+and hash tables and tries,
+increasingly sophisticated data structures, that allow us
+to solve problems that are much bigger and much more interesting
+than the very familiar one that we started with here.
+We transition to actually real world applications later
+on like a compression-- how do you take a huge amount of data
+and actually whittle it down into something more manageable;
+something that uses less of your disk space.
+We then look toward the end of the semester at these languages
+that you've might have heard of now, the acronyms therefore
+like HTML and HTTP, PHP and SQL and the like.
+And then after that we look
+at what's increasingly trendy and compelling.
+A lot of the features you yourself use
+in Facebook these days are very much dynamic.
+Things are moving and changing
+without the whole page reloading;
+when we looked towards the end of the semester
+Ajax enabled websites much like the ones we all use today.
+But truly the climax of this course is what we've dubbed the
+CS50 Fair.
+Towards semester's end you will have the opportunity
+to choose a project to work on, choose a project
+that is entirely of your own choice to execute.
+And waiting for you across the street ultimately will be a
+whole lot of balloons, a whole lot of candy, family, friends.
+Last year's event was attended by 1,000 plus attendees
+and it will be an opportunity for you to really mingle
+and to conclude the course with a look at your
+and other friends' projects.
+But also this year you will see a whole variety of achievements.
+So though you'll find yourself playing
+with Scratch toward term's start, playing with C
+and similar languages toward term's middle,
+you'll see last year that when you end up producing yourselves
+and seeing ads for CS50 Fair are all types of problems
+and applications being solved.
+This quick list here suggests last year's students implemented
+Android apps for their phones, Facebook apps, applications
+for iPhone and iPods; applications for Mac OS;
+things involving SOS and the
+like whereby you can actually send text messages
+to a program you wrote and get back a response,
+much like you can for those familiar
+with this other CS50 App called Shuttleboy.
+The images you'll see are a little something like this--
+absolutely mesmerizing what will be on each of your screens
+and oh there is also some popcorn toward term's end.
+But we will also introduce towards the end of this semester
+in an effort to really make it okay to stay up all night,
+will be the first ever CS50 hack-a-thon.
+This will be optional, given the late hour,
+this will be probably be an innovation I will completely
+regret to the night before; but what we will do is model this
+after an event that happens at MIT quite often,
+at Facebook quite often;
+at 9 p.m. there will be served some pizza;
+at 2 a.m. there will be Chinese food
+and for anyone left standing
+at 6 a.m. there will be a field trip to IHOP in the square.
+What is the goal of these 10 hours?
+Well partly this is just for fun--
+this is what computer people sometimes do, intentionally
+or unintentionally but as also will see a really nice way
+to culminate the semester and frankly carve
+out a 10 hour block where you can bite off your final
+project's implementation surrounded by friends
+and the course's staff.
+But if you're the type who prefers to be bed by midnight,
+that's quite okay too; there'll be plenty of time
+to work on the project.
+Why don't we go ahead for those of you who need a bit
+of a rest bit, let's take a two minute break and we'll resume
+with just some final thoughts on 50.
+>> We are back so a quote that's been on CS50's website
+for several years now,
+long enough that we're not actually not sure
+who first said it; but that really captures we all think the
+spirit of this course is this one here, "Demanding
+but definitely doable, social but educational, a focused topic
+but broadly applicable skills,
+CS50 is the quintessential Harvard course."
+Every one of you standing behind me and this is only like half
+of them, have taken this course or one like it and are here
+as your support for the entire semester.
+In particular let me draw your attention to these two folks
+on the end who's probably come a little close
+to my microphone to say hello.
+Cansu Aydede and Yuhki Yamashita,
+the course's head teaching  fellows [applause]
+and our leaders from Mather House
+and Eliot House respectively would
+like to say a little hello to you.
+>> Hello, welcome to CS50.
+Well I've been taking this course or I've been part
+of this course for the last three years so every years
+and it's a really special class or organization
+to be a part of-- really a family
+and I think Cansu will talk a  little bit about that.
+But yeah we're all excited to have you here
+and we have all sorts of things planned outside of problem sets
+and we have the Fair and everything
+that David has been talking
+about so we're really excited to start so.
+>> Thanks Yuhki, so CS50 is a  family.
+This is what I'm supposed to tell you guys
+and we're all here to help you out.
+I am a senior in Eliot House
+and that's the reason why a lot of CS
+and everybody else comes back on this stage
+because we all love CS50 and we all love to be a part
+of this family again; so welcome to the family.
+And if you have any questions we're here for you.
+>> David: So we're here for you
+and we asked last year's students
+for some choice words we could offer to this year's students.
+There's of course the queue guy
+but we survey students throughout the term
+and we asked them a matter of fact what should we communicate
+to this semester's student body.
+Perhaps a mistake with some of the answers we got but one
+of our choice favorites was this one
+and it's actually fairly worth drawing one's attention to
+and that's this: I planned on taking the class
+as a freshman then convinced myself otherwise
+because I couldn't fit it into my workload.
+Same story for sophomore, same story for junior year,
+I finally took it senior year
+because they wouldn't get another chance even though it
+still doesn't fit in the workload ha ha.
+So I pulled this one out of our archives
+because of precisely that reason.
+It's very easy to get caught up in one's own studies here;
+and even I freshman year, dove into a world very much familiar
+to me-- a world that I did like but I just didn't realize
+that there were in fact worlds
+that I loved well beyond my domain of familiarity.
+In a few moments we will adjourn to the transept
+where cake happens to await.
+For those who don't know what this cake means--
+fix this in post production.
+In a moment we will adjoin to the transept where cake awaits
+and in just a few quotes will you actually see a picture
+of said cake, but we thought we'd paw off a few quotes
+who tend to have appeared on campus
+at some websites familiar to you.
+This one was among our favorite--
+"I was you at the CS50 Fair; I went to your station
+to see your program, you were my best friend;
+but when our hands touched
+as you handed me a Smiley face sticker,
+my heart skipped a beat.
+There's a lot of love in CS50."
+Some folks on this particular website are a little more
+to the point.
+"I saw you at the CS50 Fair; you were with your friends,
+wearing a tight white polo looking hawt."
+And this one too, "I saw you walking around the CS50 Fair
+with a name tag that said you were in the class.
+You were smart and adorable
+and all this time I assumed you were dumb and adorable.
+You just became so much hotter."
+So in a moment a cake much like this awaits.
+If you don't know why you're about to eat cake
+like that you will soon, but you know this.
+My path in life was fundamentally altered
+by just a handful of courses at this place
+and this was in fact one of them.
+There will in fact never be a good time to try something new,
+and there will actually never be a semester
+where you do have that more time.
+So we do hope that you bear that in mind
+as we continue this discussion on Friday.
+This is CS50.
+[ Applause ]
+[ Music ]
