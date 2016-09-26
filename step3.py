@@ -11,9 +11,9 @@ def strQ2B(ustring):
 
 
 def merge_line(infp,outfp):
-    import codecs
     ori_text = open(infp).read()
-    all_the_text = strQ2B(ori_text)
+    # all_the_text = strQ2B(ori_text)
+    all_the_text = ori_text
     text = ''
     for i in range(len(all_the_text)-1):
         if ord(all_the_text[i]) == 10:
@@ -22,8 +22,9 @@ def merge_line(infp,outfp):
             text = text + all_the_text[i] + '\n'
         else:
             text += all_the_text[i]
-    f = codecs.open(outfp, 'w', 'utf-8')
+    f = open(outfp, 'wb')#, 'utf-8')
     f.write(text)
+    f.close()
     # for i in range(len(text)-1):
     #     if ord(text[i]) == 0xe2:
     #         print text[i],i,text[(i-10):(i-1)]

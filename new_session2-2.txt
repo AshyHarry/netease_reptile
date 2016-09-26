@@ -50,7 +50,7 @@ This is CS50, Friday of Week 0.
  So who the sender is, so maybe you could keep track of just who your most frequent correspondents are and if you keep seeing the same personfrom person X or person Y coming into your inbox and clearlyI like having a dialog with these people or have to for work, that might in fact bubble up in your inbox.
  Other thoughts? Speed of response, right, so I actually do tend to respond to some people's emails more quickly than others and that in fact might be a useful indicator.
  And if I'm already in this habit, let my software, let my computer do that thinking for me and bubble up to the top of my attention what I should address first.
- And another ideaï¼ So how long you leave the window open.
+ And another idea？ So how long you leave the window open.
  So this one too is an interesting heuristic and these kinds of ideas are actually really prevalent in like the advertising world, and I'm sure of sites like Facebook and the like actually do keep track of how much time you spend using this application or how much time you spend on this particular page so that they can infer from that behavior what you actually care about and what you might actually look at more intensely.
  So feel free to play with this if you like.
  I just turned it on literally this morning to start playing and I'm on myself a couple of email lists, one of which had an email this morning saying, "Hey, has anyone tried this, it really kind of sucks.
@@ -62,14 +62,14 @@ This is CS50, Friday of Week 0.
  You can go to cs50.
 net/lectures and that will lead you to a link where the video is nicely embedded in HDV.
  Thanks to our video grapplers this year.
- What you'll see here is a little clip of what I showed on Wednesday whereby this semester for the first time we'll be including after a few days, it takes a few days of human labor toâ we will be transcribing the lectures in their entirety word for word, awkward as this is for me to actually see the words I'm saying in retrospect.
+ What you'll see here is a little clip of what I showed on Wednesday whereby this semester for the first time we'll be including after a few days, it takes a few days of human labor to— we will be transcribing the lectures in their entirety word for word, awkward as this is for me to actually see the words I'm saying in retrospect.
  But you will then be able to read what's there.
  Do keyword search based on anything that I happen to say, if you search for this in a few days' time.
  And similarly can you click on any sentence in the transcript, jump right to that point in the video.
  So thisis very much online education CS50 style.
  And if you speak other languages that I don't, you can nonetheless compel me to speak them at least in subtitle form.
  So I wanted to take a few excerpts from the course's syllabus since it's not an interesting document to walk through line by line, but something you should read at some point very soon.
- What ultimately matters in this course is notâ is not so much where you end up relative to your classmates relative to yourself in week 0.
+ What ultimately matters in this course is not— is not so much where you end up relative to your classmates relative to yourself in week 0.
  And so this really is the mantra of the course.
  One of the concerns out of the gate for students in this course, particularly those we dub less comfortable is that you're already starting off at a disadvantage.
  My god, this student sitting next to me was programming since he or she was 6.
@@ -161,7 +161,7 @@ com, we thought it would be fun to just give you a couple of teasers from anothe
  Those of you more comfortable, rest assured we'll start filling in some gaps before long if you're already familiar with this.
  But all of you in this room probably remember what we technically call the base 10 system or decimal system because back in grade school or the like, you learned to count and add and subtract numbers by way of columns.
  The so called ones column on the right, the tens column next to it, the hundreds column, the thousands column, and so forth.
- So if you had some number back in grade school like 123, well, why do we express this as 123? When really I just see on the board 1, 2, 3ï¼ Well, we have what? One in the so called hundreds columns, a two in the so called tens column so that's 10 times 1 plus 10 times 2 is 120, plus 3 times 1, 123 alright, so completely  uninteresting, if this is something long familiar to you, but it turns out computers work in exactly the same way.
+ So if you had some number back in grade school like 123, well, why do we express this as 123? When really I just see on the board 1, 2, 3？ Well, we have what? One in the so called hundreds columns, a two in the so called tens column so that's 10 times 1 plus 10 times 2 is 120, plus 3 times 1, 123 alright, so completely  uninteresting, if this is something long familiar to you, but it turns out computers work in exactly the same way.
  The so called binary system, these zeros and ones that you'd probably have some vague sense underlie all computers today actually reduced to the exact same grade school kind of math and system except with computers, because it's a lot easier to use just two digits, zero and one.
  Do they use only columns like with the ones column, the twos columns, the fours column, and the eights column? And if you noticed earlier that these are what we'd call powers of ten, these are just powers of two.
  So if you need more--bigger numbers, you just have a 16's column and a 32's column, and so forth.
@@ -171,13 +171,13 @@ com, we thought it would be fun to just give you a couple of teasers from anothe
  I can only put a zero or 1 in each of these slides.
  But after that, the math is the same, eight times whatever, four times whatever, two times whatever, and so forth.
  So what's 7? Right, one, one, one and then a zero.
- And just like in the decimal system, you can put as many leading zeros, anyâ as many zeros on the left that you want.
+ And just like in the decimal system, you can put as many leading zeros, any— as many zeros on the left that you want.
  They're completely inconsequential and so we now have the number 7.
  Meanwhile, the number zero is.
  Alright, it's all zeros so I'll--just for consistency, use four of them here, but that's just an aesthetic.
  And I mentioned on Wednesday that computer scientists do in fact start counting from zero not one.
  Well, this is pretty much why.
- Because if you ever holdâ the numbering system reduces to this basic idea of zeros and ones, each of which is in a certain column, each of which has some weights associated with it, it's just natural.
+ Because if you ever hold— the numbering system reduces to this basic idea of zeros and ones, each of which is in a certain column, each of which has some weights associated with it, it's just natural.
  It's obvious to start counting at zero.
  Otherwise, you're wasting a bit, so to speak, unnecessarily.
  And a bit, B-I-T, just a shorthand for binary digit, so a digit of zero over a  one, bi means two, you only have two digits.
@@ -193,7 +193,7 @@ com, we thought it would be fun to just give you a couple of teasers from anothe
  And for better or for worse we've done a lot of damage over the past few years for this stuff.
  When you get more and more acquainted with geek humor from the likes of this is Foxtrot XKCD is popular, Ph.
 D.
- comics, there's a whole bunch of geekery out there that will perhaps turn toâ so that you do exit this course as a complete side effect with an understanding as to why it was funny or at least awkward that we did, in fact on Wednesday, have a CAT pictured in a ceiling.
+ comics, there's a whole bunch of geekery out there that will perhaps turn to— so that you do exit this course as a complete side effect with an understanding as to why it was funny or at least awkward that we did, in fact on Wednesday, have a CAT pictured in a ceiling.
  So, how do you go from just numbers, zeros and ones to actually useful information? Well it turns out a bunch of years ago people just decided that if we have the ability to express numbers and we actually care about expressing letters of  the alphabet, well we just need some kind of mapping between one and the other, and so thus was born what's generally called the ASCII.
  This is just an acronym that you still see and use today, though there were newer systems that are more expressive for other languages, non-romance languages.
  But ASCII is just a code.
@@ -214,24 +214,24 @@ D.
  And so this, in fact, when you say your computer stores information as zeros and ones, you've just typed the capital letter A, that's all that's going on inside.
  Now, how is that actually being implemented? It actually depends on the technology.
  You probably know your computer has something called RAM which is where documents and programs live just temporarily while you're running them 'cause RAM tends to be pretty fast and whereas your hard disk is where programs and files  live permanently.
- You can pull the cord and your files should not actually get deleted but the hard disks areâ use a different technology altogether.
+ You can pull the cord and your files should not actually get deleted but the hard disks are— use a different technology altogether.
  But at the end of the day, and here's why we just went with binary and not decimal years ago, when you have one implement a computer with a physical device, it's actually really easy to represent the  notion of on or off.
  Consider a light switch.
  You can go on or you can go off and actually, how about some gratuitous use of technology? For those of you for--with iPhone 4, by far, the most useful application for 99 cents is this flashlight in the middle of the night.
  So this might represent a one.
  This now represents a zero.
- One, zero, oneâ promise it gets more interesting, zero.
+ One, zero, one— promise it gets more interesting, zero.
  So why is this germane? Well, if you're implementing a computer that needs to represent information now all you need is something like electricity which can be on or off, on or off.
  And when you actually wanna store information on disk, can you actually use, as we'll see in a moment, magnetic particles.
  But just to hammer home this point, if I could, we have time for one awkward demonstration.
  And for that I need a byte of volunteers, alright? First eight hands that I saw we're roughly in here.
  So come on up and I'll--okay, one, two, three, four, five--five, six, seven, eight.
  But you have to be comfortable on stage, that's the catch 'cause this will be going out on the Internet.
- One, two, three, four, five, six, sevenâ sure, come on up, and the eighth person to stand up right here.
+ One, two, three, four, five, six, seven— sure, come on up, and the eighth person to stand up right here.
  Come on up.
  Okay.
  So we now have a byte's worth of volunteers.
- Why don't we use this side of the stageï¼ and I'll make some room for you.
+ Why don't we use this side of the stage？ and I'll make some room for you.
  You are the 128th's column, you're the 64's, 32's, 16's, 8's, and we're gonna have to fix this slightly in a moment.
  Otherwise the math is gonna get completely screwed up.
  So if you guys could come over here but still maintain your alignment so 128 should be all the way over here and one, you should be all the way over here and you guys similarly need to shuffle.
@@ -271,14 +271,14 @@ D.
  Oh, you can keep that.
  You can keep that.
  Okay.
- So what doesâ how does that actually apply to real computers, right? So this is not the most efficient way of representing information.
+ So what does— how does that actually apply to real computers, right? So this is not the most efficient way of representing information.
  What actually goes on underneath the hood? Well, it turns out some of you might recall this silly game from years ago.
  Wooly Willy? It turns out these are really hard to find in the 21st century.
- So these things called Wooly Willy is just a plasticâ it's this paper mend with a plastic cover and there's all these black magnetic particles here.
+ So these things called Wooly Willy is just a plastic— it's this paper mend with a plastic cover and there's all these black magnetic particles here.
  And if you use this little magnet you can draw a mustache or hair, or eyebrows or whatever on this particular face.
  Now this is mostly irrelevant to what we're talking about except for the fact that there are magnetic particles involved and they're really small because it turns out what's inside most of your laptops and desktop computers are these things called hard drives.
  And a hard drive, if you ever open that thing up, is actually just a big metal container t hat contains one or more platters, so to speak, these circular pieces of metal and on top of those circular pieces of metal are essentially tiny little magnetic particles like this, so small that you actually can't see them.
- But if you touch them or open the hard drive and actually poke around, you will do damage because you'll mangle theseâ the alignment of these particles.
+ But if you touch them or open the hard drive and actually poke around, you will do damage because you'll mangle these— the alignment of these particles.
  You'll corrupt your data.
  But what's interesting is when they're actually there, essentially, if this is a magnetic particle, you can actually represent zeros and ones pretty easily.
  You don't need a light switch or a light bulb or an iPhone app to turn something on or off.
@@ -299,7 +299,7 @@ D.
  Other signals move the read/write heads to read or write data on the platters.
  This machinery is so precise that a human hair couldn't even pass between the heads and spinning platters, yet it all works in terrific speeds.
  So if you've ever done something bad like drop your laptop or smack your computer and you've never been told not to do this.
- It's largely becauseâ and if you've never been, don't do this, it's largely because there are these very sensitive moving parts and there are relatively few moving parts left in today's computers.
+ It's largely because— and if you've never been, don't do this, it's largely because there are these very sensitive moving parts and there are relatively few moving parts left in today's computers.
  Some of you, in fact, might not even have these devices anymore with moving parts.
  The fan is perhaps the only thing left in those of you who have computers with what are called SSDs.
  But in hard drives where we actually have these moving platters, here is in fact, how we get from electricity and magnetism to those zeros and ones.
@@ -311,7 +311,7 @@ D.
  If the current is sent in the opposite direction, the polarization is reversed.
  How do you get data off the hard disk? Just reverse the process.
  So as the particles on the disk that get the current in the read/write head moving put together millions of these magnetized segments and you've got a file.
- Now, the pieces of a single file may be scanning all the hard drive's platters, patternsâthe mess of papers on your desk.
+ Now, the pieces of a single file may be scanning all the hard drive's platters, patterns—the mess of papers on your desk.
  So the special active file keeps track of whatever you missed.
  Don't you wish that you had something like that? Alright.
  So take it with a grain of salt.
@@ -339,7 +339,7 @@ D.
  This little felt thing there is just to avoid too much friction from building up with the plastic or to keep it slightly separated from the case, but that's it.
  That's all there was to those things called floppy disks.
  But what's amazing is that the hard drives we have today in a desktop or in a laptop, a hard drive and a laptop is only about--yey big! It's roughly the same size physically as those floppy disks and yet how many, how much, how many bytes fit on a typical hard drive today? What's that 500, so 500 megabytes, this is 1.
-4 megabytes so a typical hard drive might have 500â no, not 500 megabyte, 500 gigabytes which is 500 billion bytes and if you have a desktop computer you might actually have a 1 terabyte drive or 1.
+4 megabytes so a typical hard drive might have 500— no, not 500 megabyte, 500 gigabytes which is 500 billion bytes and if you have a desktop computer you might actually have a 1 terabyte drive or 1.
 5 terabyte drive or 1--2.
 0 terabyte drive.
  These are trillions now of bytes.
@@ -367,7 +367,7 @@ D.
  That's a lot harder of a problem to solve if you need to reconstruct the fragmentation, yeah.
  Good question, so there is this little reading head kind of like in an old phonograph player that does move back and forth and in and out depending on the implementation.
  So there is generally a little computer, a circuit board in the hard drive itself that knows how to tell it to go up, down, left, right and so forth.
- And if you've ever heard the word driver software that you install in your computer so that your computer, your operating system, Windows or Mac OS, knows how to talk to that piece of hardware, it's that driver software that then empowers the operating systems to send those commands as well, up, down, left, right depending on how the diskâ the data is laid out on the disk.
+ And if you've ever heard the word driver software that you install in your computer so that your computer, your operating system, Windows or Mac OS, knows how to talk to that piece of hardware, it's that driver software that then empowers the operating systems to send those commands as well, up, down, left, right depending on how the disk— the data is laid out on the disk.
  Let me go over here for another question.
  Okay, what are the advantages of SSDs and how do they work.
  Let me answer this briefly now, I'm happy to chat more during break time.
@@ -376,7 +376,7 @@ D.
  The things we've had in cameras for several years by putting gigabytes, soon hopefully terabytes of storage on a device that has no moving parts.
  Generally, the feature is that they are much faster because they have no moving parts.
  Even though a hard drive spins at 7200 times per minute or even faster, that's relatively slower than the speed of light.
- And so when you actually have a device that is purely electronic, and even that doesn'tâ the bits don't flow at the speed of light in reality.
+ And so when you actually have a device that is purely electronic, and even that doesn't— the bits don't flow at the speed of light in reality.
  It's a lot faster of a device.
  But these days you pay for it which is why you get SSDs, you're paying several hundred dollars more.
  So let's transition from these lower level details.
@@ -428,7 +428,7 @@ D.
  So just add 1 to this variable's value, so now socks on feet is of course 1 and so next.
  Look for matching sock.
  Problem, so where are we at line 9? If you find a matching sock which you didn't so then else.
- Okay, so notice again the control flow and thisâ the choice of indentation here is deliberate throughout programming whether it's in C or PHP or JavaScript in this particular course.
+ Okay, so notice again the control flow and this— the choice of indentation here is deliberate throughout programming whether it's in C or PHP or JavaScript in this particular course.
  The indentation gives you a visual cue as to which lines are related to each other.
  So the fact that line 9 did not match, if you find a matching sock which we didn't, that means we immediately jump to the else which is line 13 and so Philip now has to do what? Remove first sock from foot.
  Oh man! Socks on feet, minus minus.
@@ -473,12 +473,12 @@ c, dot C hints at the fact that this program I just whipped up is written in a l
 com or any websites really that you can imagine.
  Can you probably produce after just several weeks of fundamentals like these? So I'm saving this file, notice there is a few keywords that we'll come back to next week like main which is kind of the main part of my program.
  There is this include which allows me to include code, source code so to speak that other people wrote so I don't have to figure out for myself how to print things to the screen.
- Other people are telling me how toâ other people had solved that problem for me, and this thing between quotes, we'll start calling a string.
+ Other people are telling me how to— other people had solved that problem for me, and this thing between quotes, we'll start calling a string.
  It's just a sentence or words or whatever that I wanna print.
  And then there are some stupid syntax like curly braces and semicolons that initially are kind of annoying because you have to remember where all this junk goes.
  But at the end of the day, it's really going to be identical to what we see pictorially with Scratch.
  I'm now gonna run a program called GCC which is what's called the compiler.
- Compiler, we'll also revisit next week takesâ human text, ASCII text as input and output zeroes and ones that represent that program in a manner that the CPU, the Intel Inside, actually understands which isâ interesting, dammit, not installed on this computer.
+ Compiler, we'll also revisit next week takes— human text, ASCII text as input and output zeroes and ones that represent that program in a manner that the CPU, the Intel Inside, actually understands which is— interesting, dammit, not installed on this computer.
  So what we would see, I'm going to completely fake this, is a program that operates like that.
  So I just realized this is a new MacBook Pro that I didn't actually download the compiler onto it apparently.
  So good, that will give us something to do next week.
@@ -610,7 +610,7 @@ sb.
  So play-- Cat meows ad nauseam.
  But touch the cat and--[sound effects] [laughter].
  So don't touch this particular cat.
- So how is this working? Well, again, I'm not spending too much time on the specifics because again, it should hopefully startâit was, oh, that's kind of intuitive.
+ So how is this working? Well, again, I'm not spending too much time on the specifics because again, it should hopefully start—it was, oh, that's kind of intuitive.
  If something is true do this, else something is true, do that.
  Well, what are some of the other constructs we're gonna have access to starting with scratch and see? Well, certainly, variables.
  If you want to maintain states, that is, to say, remember some value, well, you can use what's called a variable and here's what it looks like in this language called scratch.
@@ -649,16 +649,16 @@ sb.
  But let me go ahead and open up, let's say, this cat example, move two--you can even have different sprites interact with each other much like this.
  Now, all the cat is doing is that it's an infinite loop and it's checking if I am not facing bird, face bird, and it's [noise]-- It's constantly chasing the bird.
  And so now, you have two threads so to speak, two miniature programs, two sprites all interacting with one another.
- You can do other things too, and I know I'm flying through these but only because it's more fun to play hands-on on your ownâ oh, actually, this guy is kinda funny.
+ You can do other things too, and I know I'm flying through these but only because it's more fun to play hands-on on your own— oh, actually, this guy is kinda funny.
  Let's play this.
  This is all he does.
  But again, it hints with these fundamentals.
  You've got a loop, you've got a condition and a boolean to check if he's touching the edge, and some statements to tell him to shout or to actually turn around.
- So what more is there? There are also these things called events in programming, and specifically, scratch, whereby you can have two sprites such as this boy and this girl, and when you actually hit the spacebar with the likeâ oops--if you actually hit the spacebar or the like, one sprite can do something, and then the other sprite can do something in response because in addition to When Green Flag Clicked, there's also this kind of starting point, this alternative to main that says When I Receive Event In other words, you can pass sort of secret messages or notes between sprites by giving them a name, like in this case, events, and then having one talk to the other.
+ So what more is there? There are also these things called events in programming, and specifically, scratch, whereby you can have two sprites such as this boy and this girl, and when you actually hit the spacebar with the like— oops--if you actually hit the spacebar or the like, one sprite can do something, and then the other sprite can do something in response because in addition to When Green Flag Clicked, there's also this kind of starting point, this alternative to main that says When I Receive Event In other words, you can pass sort of secret messages or notes between sprites by giving them a name, like in this case, events, and then having one talk to the other.
  So this is a simple incarnation of that game you might know as Marco Polo.
  Now, in Problem Set Zero, well, you get to play with exactly these things and in the hacker edition if you so choose, can you play with one of these things.
  I taught I'd demo just a couple little snippets with this.
- So to be clear, we expect most students to very comfortably pursue the standard edition of the P set, but for this particular P set, the hacker edition gives youâ and we have about 150 or so of these out on the hallway, and we'll have them at office hours throughout the coming week--this is a little logic board with lots of sensors;
+ So to be clear, we expect most students to very comfortably pursue the standard edition of the P set, but for this particular P set, the hacker edition gives you— and we have about 150 or so of these out on the hallway, and we'll have them at office hours throughout the coming week--this is a little logic board with lots of sensors;
  the sound sensor, a light sensor, a little joystick and the like.
  And now, that you have not just the keyboard, but a device like this connected via USB can you do something like this, like a former student did.
  This is a little game--and again, don't be overwhelmed by the complexity.
